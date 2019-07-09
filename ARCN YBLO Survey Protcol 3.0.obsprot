@@ -3,7 +3,7 @@
   "meta-version":2,
   "name":"ARCN YBLO Survey Protocol 3.0",
   "version":3.0,
-  "date":"2019-06-19",
+  "date":"2019-07-09",
   "description":"NPS Arctic Network Yellow-billed Loon Surveys, Alaska",
   "gps_interval": 1,
   "mission":{
@@ -81,7 +81,7 @@
   },
     "features":[
     {
-      "name":"Observation",
+      "name":"Loons",
       "attributes":[
         {"name":"Lake", "type":700},
         {"name":"SpeciesAcronym", "type":700},
