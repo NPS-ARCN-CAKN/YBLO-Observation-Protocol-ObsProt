@@ -1,71 +1,198 @@
 {
-  "meta-name":"NPS-Protocol-Specification",
-  "meta-version":2,
-  "name":"ARCN YBLO Survey Protocol 3.0",
-  "version":3.0,
-  "date":"2019-07-09",
-  "description":"NPS Arctic Network Yellow-billed Loon Surveys, Alaska",
+  "meta-name": "NPS-Protocol-Specification",
+  "meta-version": 2,
+  "name": "ARCN YBLO Survey Protocol 3.0",
+  "version": 3,
+  "date": "2019-07-15",
+  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.0",
   "gps_interval": 1,
-  "mission":{
-    "attributes":[
-      {"name":"Plot",       "type":700},
-      {"name":"TailNo",     "type":700},
-      {"name":"SkyConditions",     "type":700},
-      {"name":"WindSpeed",     "type":100},
-      {"name":"Observer",     "type":700},
-      {"name":"Pilot",     "type":700},
-      {"name":"Aircraft",     "type":700},
-      {"name":"AirSpeed",     "type":100},
-      {"name":"Temp",     "type":100},
-      {"name":"PlotNotes",    "type":700}
+  "mission": {
+    "attributes": [
+      {
+        "name": "Plot",
+        "type": 700
+      },
+      {
+        "name": "TailNo",
+        "type": 700
+      },
+      {
+        "name": "SkyConditions",
+        "type": 700
+      },
+      {
+        "name": "WindSpeed",
+        "type": 100
+      },
+      {
+        "name": "Observer",
+        "type": 700
+      },
+      {
+        "name": "Pilot",
+        "type": 700
+      },
+      {
+        "name": "Aircraft",
+        "type": 700
+      },
+      {
+        "name": "AirSpeed",
+        "type": 100
+      },
+      {
+        "name": "Temp",
+        "type": 100
+      },
+      {
+        "name": "PlotNotes",
+        "type": 700
+      }
     ],
-    "dialog":{
-      "title":"Mission Properties",
-      "grouped":true,
-      "sections":[
+    "dialog": {
+      "title": "Mission Properties",
+      "grouped": true,
+      "sections": [
         {
-          "elements":[
-            {"type":"QEntryElement", "key":"p", "bind":"textValue:Plot",         "title":"Plot #",      "placeholder":"Plot #", "autocorrectionType":"No"},     
-            {"type":"QEntryElement", "key":"tn", "bind":"textValue:TailNo",      "title":"Tail #",      "placeholder":"Tail #", "autocorrectionType":"No"},
-            {"type":"QRadioElement", "key":"w",  "bind":"selectedItem:SkyConditions",  "title":"Sky conditions",     "items":["1-Clear to <10% cloud cover","2-Partly cloudy; 10-50% cloud cover","3-Cloudy;  51-90% cloud cover","4-Overcast; >90% cloud cover","5-Fog or smoke","6-Drizzle","7-Showers","8-Rain","9-Sleet","10-Light snow"]},
-            {"type":"QRadioElement", "key":"ws", "bind":"selectedItem:WindSpeed",     "title":"Wind Speed",  "items":[">15 knots", "10-14 knots", "9-5 knots", "<5 knots"]},
-            {"type":"QEntryElement", "key":"r",  "bind":"textValue:Observer",    "title":"Observer initials",    "placeholder":"Observer initials", "autocorrectionType":"No", "autocapitalizationType":"AllCharacters"},
-            {"type":"QEntryElement", "key":"pi",  "bind":"textValue:Pilot",    "title":"Pilot initials",    "placeholder":"Pilot initials", "autocorrectionType":"No", "autocapitalizationType":"AllCharacters"},
-            {"type":"QEntryElement", "key":"v1", "bind":"textValue:Aircraft",      "title":"Aircraft",      "placeholder":"Aircraft", "autocorrectionType":"No"},
-            {"type":"QEntryElement", "key":"AirSpeed", "bind":"textValue:AirSpeed",      "title":"Air speed",      "placeholder":"AirSpeed", "autocorrectionType":"No"},
-            {"type":"QMultilineElement", "key":"c",  "bind":"textValue:PlotNotes",    "title":"Comments"}
-            ]
+          "elements": [
+            {
+              "type": "QEntryElement",
+              "key": "p",
+              "bind": "textValue:Plot",
+              "title": "Plot #",
+              "placeholder": "Plot #",
+              "autocorrectionType": "No"
+            },
+            {
+              "type": "QEntryElement",
+              "key": "tn",
+              "bind": "textValue:TailNo",
+              "title": "Tail #",
+              "placeholder": "Tail #",
+              "autocorrectionType": "No"
+            },
+            {
+              "type": "QRadioElement",
+              "key": "w",
+              "bind": "selectedItem:SkyConditions",
+              "title": "Sky conditions",
+              "items": [
+                "1-Clear to <10% cloud cover",
+                "2-Partly cloudy; 10-50% cloud cover",
+                "3-Cloudy;  51-90% cloud cover",
+                "4-Overcast; >90% cloud cover",
+                "5-Fog or smoke",
+                "6-Drizzle",
+                "7-Showers",
+                "8-Rain",
+                "9-Sleet",
+                "10-Light snow"
+              ]
+            },
+            {
+              "type": "QRadioElement",
+              "key": "ws",
+              "bind": "selectedItem:WindSpeed",
+              "title": "Wind Speed",
+              "items": [
+                ">15 knots",
+                "10-14 knots",
+                "9-5 knots",
+                "<5 knots"
+              ]
+            },
+            {
+              "type": "QEntryElement",
+              "key": "r",
+              "bind": "textValue:Observer",
+              "title": "Observer initials",
+              "placeholder": "Observer initials",
+              "autocorrectionType": "No",
+              "autocapitalizationType": "AllCharacters"
+            },
+            {
+              "type": "QEntryElement",
+              "key": "pi",
+              "bind": "textValue:Pilot",
+              "title": "Pilot initials",
+              "placeholder": "Pilot initials",
+              "autocorrectionType": "No",
+              "autocapitalizationType": "AllCharacters"
+            },
+            {
+              "type": "QEntryElement",
+              "key": "v1",
+              "bind": "textValue:Aircraft",
+              "title": "Aircraft",
+              "placeholder": "Aircraft",
+              "autocorrectionType": "No"
+            },
+            {
+              "type": "QEntryElement",
+              "title": "Air speed",
+              "key": "AirSpeed",
+              "bind": "textValue:AirSpeed",
+              "placeholder": "AirSpeed",
+              "autocorrectionType": "No"
+            },
+            {
+              "type": "QMultilineElement",
+              "key": "c",
+              "bind": "textValue:PlotNotes",
+              "title": "Comments"
+            }
+          ]
         }
       ]
     },
-    "symbology":{
+    "symbology": {
       "type": "simple",
       "symbol": {
         "type": "esriSMS",
         "style": "esriSMSSquare",
-        "color": [0,255,0,255],
+        "color": [
+          0,
+          255,
+          0,
+          255
+        ],
         "size": 13,
         "outline": {
-          "color": [0,0,0,255],
+          "color": [
+            0,
+            0,
+            0,
+            255
+          ],
           "width": 1
         }
       }
     },
-    "on-symbology":{
+    "on-symbology": {
       "type": "simple",
       "symbol": {
         "type": "esriSLS",
         "style": "esriSLSSolid",
-        "color": [255,127,127,255],
+        "color": [
+          255,
+          127,
+          127,
+          255
+        ],
         "width": 0.5
       }
     },
-    "off-symbology":{
+    "off-symbology": {
       "type": "simple",
       "symbol": {
         "type": "esriSLS",
         "style": "esriSLSDash",
-        "color": [255,255,194,255],
+        "color": [
+          255,
+          255,
+          194,
+          255
+        ],
         "width": 0.5
       }
     },
@@ -74,108 +201,584 @@
       "symbol": {
         "type": "esriSMS",
         "style": "esriSMSCircle",
-        "color": [52,152,219,255],
+        "color": [
+          52,
+          152,
+          219,
+          255
+        ],
         "size": 5
       }
     }
   },
-    "features":[
+  "features": [
     {
-      "name":"Loons",
-      "attributes":[
-        {"name":"Lake", "type":700},
-        {"name":"SpeciesAcronym", "type":700},
-        {"name":"Count", "type":100},
-        {"name":"Pairs", "type":800},
-        {"name":"Nest", "type":800},
-        {"name":"Chicks", "type":100},
-        {"name":"Eggs", "type":100},
-        {"name":"Location", "type":700},
-        {"name":"Activity", "type":700},
-        {"name":"HydrologyCode", "type":700},      
-        {"name":"Lake_DrainageClass", "type":700},
-        {"name":"Lake_Monitor", "type":800},
-        {"name":"LakeDrainageType", "type":700},
-        {"name":"Lake_LateralOutletType", "type":700},
-        {"name":"Lake_DrainageCharacteristics", "type":700},
-        {"name":"Waypoint", "type":700},
-        {"name":"IncidentalSpecies", "type":700},
-        {"name":"ObservationNotes", "type":700}
+      "name": "Loons",
+      "attributes": [
+        {
+          "name": "Lake",
+          "type": 700
+        },
+        {
+          "name": "SpeciesAcronym",
+          "type": 700
+        },
+        {
+          "name": "Count",
+          "type": 100
+        },
+        {
+          "name": "Pairs",
+          "type": 800
+        },
+        {
+          "name": "Nest",
+          "type": 800
+        },
+        {
+          "name": "Chicks",
+          "type": 100
+        },
+        {
+          "name": "Eggs",
+          "type": 100
+        },
+        {
+          "name": "Location",
+          "type": 700
+        },
+        {
+          "name": "Activity",
+          "type": 700
+        },
+        {
+          "name": "HydrologyCode",
+          "type": 700
+        },
+        {
+          "name": "Lake_DrainageClass",
+          "type": 700
+        },
+        {
+          "name": "Lake_Monitor",
+          "type": 800
+        },
+        {
+          "name": "LakeDrainageType",
+          "type": 700
+        },
+        {
+          "name": "Lake_LateralOutletType",
+          "type": 700
+        },
+        {
+          "name": "Lake_DrainageCharacteristics",
+          "type": 700
+        },
+        {
+          "name": "Waypoint",
+          "type": 700
+        },
+        {
+          "name": "ObservationNotes",
+          "type": 700
+        }
       ],
-      "locations":[
-        {"type":"gps",           "default":false, "allow":true},
-        {"type":"mapTarget",     "default":false, "allow":true},
-        {"type":"mapTouch",      "default":false, "allow":true},
-        {"type":"angleDistance", "default":true,  "allow":false, "deadAhead":180.0, "units":"meters", "direction":"cw" }
+      "locations": [
+        {
+          "type": "gps",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTarget",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTouch",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "angleDistance",
+          "default": true,
+          "allow": false,
+          "units": "meters",
+          "direction": "cw",
+          "deadAhead": 180
+        }
       ],
-      "dialog":{
-        "title":"Loons",
-        "grouped":false,
-        "sections":[
+      "dialog": {
+        "title": "Loons",
+        "grouped": false,
+        "sections": [
           {
-            "elements":[
-              {"type":"QEntryElement","key":"Lake",  "bind":"textValue:Lake",  "title":"Lake"},
-              {"type":"QRadioElement",  "key":"SpeciesAcronym",  "bind":"selectedItem:SpeciesAcronym",  "title":"Bird species","items":["YBLO", "PALO", "RTLO", "ARLO", "COLO", "UNLO", "TERN", "ARTE", "ALTE", "COLONY", "RNGR", "TUSW" ,"GLGU"]},
-              {"type":"QIntegerElement","key":"Count",  "bind":"numberValue:Count",  "title":"Bird count"},
-              {"type":"QBooleanElement","key":"Pairs",  "bind":"boolValue:Pairs", "title":"Pair?", "boolValue":0},
-              {"type":"QBooleanElement","key":"Nest",  "bind":"boolValue:Nest", "title":"Nest?", "boolValue":0},
-              {"type":"QIntegerElement","key":"Chicks",  "bind":"numberValue:Chicks", "title":"Chicks"},
-              {"type":"QLabelElement",  "title":"Eggs"},{"type":"QSegmentedElement", "key":"Eggs",  "bind":"selectedItem:Eggs", "items":["0", "1", "2"]},
-              {"type":"QLabelElement",  "title":"Location of nest"},{"type":"QSegmentedElement", "key":"Location",  "bind":"selectedItem:Location", "items":["Peninsula", "Shoreline", "Island"]},
-              {"type":"QLabelElement",  "title":"Nest activity"},{"type":"QSegmentedElement", "key":"Activity",  "bind":"selectedItem:Activity", "items":["On nest", "Flushed", "By nest"]},
-              {"type":"QRadioElement",  "key":"HydrologyCode", "bind":"selectedItem:HydrologyCode", "title":"Hydrology change", "items":["0 = missing lake", "1-2 - 1 lake actually now 2","2-1 = 2 lakes actually now 1",""]},                         
-              {"type":"QRadioElement",  "key":"Lake_DrainageClass", "bind":"selectedItem:Lake_DrainageClass", "title":"Lake drainage amount", "items":["","1-0-25%","2-25-50%","3-50-75%","4->75%","5-100%"]},
-              {"type":"QBooleanElement","key":"Lake_Monitor",  "bind":"boolValue:Lake_Monitor", "title":"Flag lake for hydrological changes?", "boolValue":0},
-              {"type":"QRadioElement",  "key":"LakeDrainageType", "bind":"selectedItem:LakeDrainageType", "title":"Lake drainage attributes", "items":["","Emergent vegetation","Mud flat", "Barren", "Puddles"]},
-              {"type":"QRadioElement",  "key":"Lake_LateralOutletType", "bind":"selectedItem:Lake_LateralOutletType", "title":"Lake outlet type", "items":[ "Talik","Lateral gully","Trickles",""]},
-              {"type":"QRadioElement",  "key":"Lake_DrainageCharacteristics", "bind":"selectedItem:Lake_DrainageCharacteristics", "title":"Other lake drainage characteristics","items":["","Retrogressive thaws","Turbid water","Slump","Stream flow","Shallow water"]},
-              {"type":"QEntryElement",  "key":"Waypoint",  "bind":"textValue:Waypoint", "title":"Waypoint","placeholder":"Waypoint", "autocorrectionType":"No"},
-              {"type":"QEntryElement","key":"IncidentalSpecies",  "bind":"textValue:IncidentalSpecies",  "title":"IncidentalSpecies"},
-              {"type":"QMultilineElement", "key":"ObservationNotes", "bind":"textValue:ObservationNotes", "title":"Notes"}
+            "elements": [
+              {
+                "type": "QEntryElement",
+                "title": "Lake",
+                "key": "Lake",
+                "bind": "textValue:Lake"
+              },
+              {
+                "type": "QRadioElement",
+                "key": "SpeciesAcronym",
+                "bind": "selectedItem:SpeciesAcronym",
+                "items": [
+                  "YBLO",
+                  "PALO",
+                  "RTLO",
+                  "ARLO",
+                  "COLO",
+                  "UNLO",
+                  "TERN",
+                  "ARTE",
+                  "ALTE",
+                  "COLONY",
+                  "RNGR",
+                  "TUSW",
+                  "GLGU"
+                ],
+                "title": "Bird species"
+              },
+              {
+                "type": "QIntegerElement",
+                "key": "Count",
+                "bind": "numberValue:Count",
+                "title": "Bird count"
+              },
+              {
+                "type": "QBooleanElement",
+                "key": "Pairs",
+                "bind": "boolValue:Pairs",
+                "title": "Pair?",
+                "boolValue": 0
+              },
+              {
+                "type": "QBooleanElement",
+                "key": "Nest",
+                "bind": "boolValue:Nest",
+                "title": "Nest?",
+                "boolValue": 0
+              },
+              {
+                "type": "QIntegerElement",
+                "key": "Chicks",
+                "bind": "numberValue:Chicks",
+                "title": "Chicks"
+              },
+              {
+                "type": "QLabelElement",
+                "title": "Eggs"
+              },
+              {
+                "type": "QSegmentedElement",
+                "key": "Eggs",
+                "bind": "selectedItem:Eggs",
+                "items": [
+                  "0",
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "type": "QLabelElement",
+                "title": "Location of nest"
+              },
+              {
+                "type": "QSegmentedElement",
+                "key": "Location",
+                "bind": "selectedItem:Location",
+                "items": [
+                  "Peninsula",
+                  "Shoreline",
+                  "Island"
+                ]
+              },
+              {
+                "type": "QLabelElement",
+                "title": "Nest activity"
+              },
+              {
+                "type": "QSegmentedElement",
+                "key": "Activity",
+                "bind": "selectedItem:Activity",
+                "items": [
+                  "On nest",
+                  "Flushed",
+                  "By nest"
+                ]
+              },
+              {
+                "type": "QRadioElement",
+                "title": "Hydrology change",
+                "key": "HydrologyCode",
+                "bind": "selectedItem:HydrologyCode",
+                "items": [
+                  "0 = missing lake",
+                  "1-2 - 1 lake actually now 2",
+                  "2-1 = 2 lakes actually now 1",
+                  ""
+                ]
+              },
+              {
+                "type": "QRadioElement",
+                "key": "Lake_DrainageClass",
+                "bind": "selectedItem:Lake_DrainageClass",
+                "items": [
+                  "",
+                  "1-0-25%",
+                  "2-25-50%",
+                  "3-50-75%",
+                  "4->75%",
+                  "5-100%"
+                ],
+                "title": "Lake drainage amount"
+              },
+              {
+                "type": "QBooleanElement",
+                "title": "Flag lake for hydrological changes?",
+                "key": "Lake_Monitor",
+                "bind": "boolValue:Lake_Monitor",
+                "boolValue": 0
+              },
+              {
+                "type": "QRadioElement",
+                "key": "LakeDrainageType",
+                "bind": "selectedItem:LakeDrainageType",
+                "items": [
+                  "",
+                  "Emergent vegetation",
+                  "Mud flat",
+                  "Barren",
+                  "Puddles"
+                ],
+                "title": "Lake drainage attributes"
+              },
+              {
+                "type": "QRadioElement",
+                "key": "Lake_LateralOutletType",
+                "bind": "selectedItem:Lake_LateralOutletType",
+                "title": "Lake outlet type",
+                "items": [
+                  "Talik",
+                  "Lateral gully",
+                  "Trickles",
+                  ""
+                ]
+              },
+              {
+                "type": "QRadioElement",
+                "title": "Other lake drainage characteristics",
+                "key": "Lake_DrainageCharacteristics",
+                "bind": "selectedItem:Lake_DrainageCharacteristics",
+                "items": [
+                  "",
+                  "Retrogressive thaws",
+                  "Turbid water",
+                  "Slump",
+                  "Stream flow",
+                  "Shallow water"
+                ]
+              },
+              {
+                "type": "QEntryElement",
+                "key": "Waypoint",
+                "bind": "textValue:Waypoint",
+                "title": "Waypoint",
+                "placeholder": "Waypoint",
+                "autocorrectionType": "No"
+              },
+              {
+                "type": "QMultilineElement",
+                "key": "ObservationNotes",
+                "bind": "textValue:ObservationNotes",
+                "title": "Notes"
+              }
             ]
           }
         ]
       },
-      "symbology":{
+      "symbology": {
         "type": "simple",
         "symbol": {
           "type": "esriSMS",
           "style": "esriSMSCircle",
-          "color": [255,255,0,255],
+          "color": [
+            255,
+            255,
+            0,
+            255
+          ],
           "size": 18,
           "outline": {
-            "color": [0,0,0,255],
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "width": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Incidental observations",
+      "attributes": [
+        {
+          "name": "IncSpecies",
+          "type": 700
+        },
+        {
+          "name": "IncCount",
+          "type": 100
+        },
+        {
+          "name": "IncNotes",
+          "type": 700
+        }
+      ],
+      "locations": [
+        {
+          "type": "gps",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTarget",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTouch",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "angleDistance",
+          "default": true,
+          "allow": false,
+          "units": "meters",
+          "direction": "cw",
+          "deadAhead": 180
+        }
+      ],
+      "dialog": {
+        "title": "Incidental species",
+        "grouped": false,
+        "sections": [
+          {
+            "elements": [
+              {
+                "key": "IncSpecies",
+                "bind": "selectedItem:IncSpecies",
+                "type": "QEntryElement",
+                "title": "Incidental species"
+              },
+              {
+                "key": "IncCount",
+                "bind": "numberValue:IncCount",
+                "type": "QIntegerElement",
+                "title": "Number of incidental species"
+              },
+              {
+                "key": "IncNotes",
+                "bind": "textValue:IncNotes",
+                "type": "QMultilineElement",
+                "title": "Notes"
+              }
+            ]
+          }
+        ]
+      },
+      "symbology": {
+        "type": "simple",
+        "symbol": {
+          "type": "esriSMS",
+          "style": "esriSMSCircle",
+          "color": [
+            255,
+            255,
+            0,
+            255
+          ],
+          "size": 18,
+          "outline": {
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
             "width": 1
           }
         }
       }
     }
   ],
-  "csv":{
-    "gps_points":{
-      "name":"GpsPoints",
-      "field_names":["Timestamp", "Latitude", "Longitude", "Datum", "Error_radius_m", "Course", "Speed_mps", "Altitude_m", "Vert_error_m"],
-      "field_types":["TEXT", "DOUBLE", "DOUBLE", "TEXT", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE"],
-      "key_indexes":[0,2,1]
+  "csv": {
+    "gps_points": {
+      "name": "GpsPoints",
+      "field_names": [
+        "Timestamp",
+        "Latitude",
+        "Longitude",
+        "Datum",
+        "Error_radius_m",
+        "Course",
+        "Speed_mps",
+        "Altitude_m",
+        "Vert_error_m"
+      ],
+      "field_types": [
+        "TEXT",
+        "DOUBLE",
+        "DOUBLE",
+        "TEXT",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "key_indexes": [
+        0,
+        2,
+        1
+      ]
     },
-    "track_logs":{
-      "name":"TrackLogs",
-      "field_names":["Observing", "Start_UTC", "Start_Local", "Year", "Day_of_Year", "End_UTC", "End_Local", "Duration_sec", "Start_Latitude", "Start_Longitude", "End_Latitude", "End_Longitude", "Datum", "Length_m"],
-      "field_types":["TEXT", "TEXT", "TEXT", "SHORT", "SHORT", "TEXT", "TEXT", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE", "TEXT", "DOUBLE"],
-      "start_key_indexes":[1,9,8],
-      "end_key_indexes":[5,11,10]
+    "track_logs": {
+      "name": "TrackLogs",
+      "field_names": [
+        "Observing",
+        "Start_UTC",
+        "Start_Local",
+        "Year",
+        "Day_of_Year",
+        "End_UTC",
+        "End_Local",
+        "Duration_sec",
+        "Start_Latitude",
+        "Start_Longitude",
+        "End_Latitude",
+        "End_Longitude",
+        "Datum",
+        "Length_m"
+      ],
+      "field_types": [
+        "TEXT",
+        "TEXT",
+        "TEXT",
+        "SHORT",
+        "SHORT",
+        "TEXT",
+        "TEXT",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "TEXT",
+        "DOUBLE"
+      ],
+      "start_key_indexes": [
+        1,
+        9,
+        8
+      ],
+      "end_key_indexes": [
+        5,
+        11,
+        10
+      ]
     },
-    "features":{
+    "features": {
       "header": "Timestamp_UTC,Timestamp_Local,Year,Day_of_Year,Feature_Latitude,Feature_Longitude,Observer_Latitude,Observer_Longitude,Datum,Map_Name,Map_Author,Map_Date,Angle,Distance,Perp_Meters",
-      "feature_field_names":["Timestamp_UTC", "Timestamp_Local", "Year", "Day_of_Year", "Latitude", "Longitude", "Datum"],
-      "feature_field_types":["DATE", "DATE", "SHORT", "SHORT", "DOUBLE", "DOUBLE", "TEXT"],
-      "feature_field_map":[0,1,2,3,4,5,8],
-      "feature_key_indexes":[0,5,4],
-      "obs_name":"Observations",
-      "obs_field_names":["Timestamp_UTC", "Timestamp_Local", "Year", "Day_of_Year", "Map_Name", "Map_Author", "Map_Date", "Angle", "Distance", "Perp_meters", "Latitude", "Longitude", "Datum"],
-      "obs_field_types":["TEXT", "TEXT", "SHORT", "SHORT", "TEXT", "TEXT", "TEXT", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE", "DOUBLE", "TEXT"],
-      "obs_field_map":[0,1,2,3,9,10,11,12,13,14,6,7,8],
-      "obs_key_indexes":[0,11,10]
+      "feature_field_names": [
+        "Timestamp_UTC",
+        "Timestamp_Local",
+        "Year",
+        "Day_of_Year",
+        "Latitude",
+        "Longitude",
+        "Datum"
+      ],
+      "feature_field_types": [
+        "DATE",
+        "DATE",
+        "SHORT",
+        "SHORT",
+        "DOUBLE",
+        "DOUBLE",
+        "TEXT"
+      ],
+      "feature_field_map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "feature_key_indexes": [
+        0,
+        5,
+        4
+      ],
+      "obs_name": "Observations",
+      "obs_field_names": [
+        "Timestamp_UTC",
+        "Timestamp_Local",
+        "Year",
+        "Day_of_Year",
+        "Map_Name",
+        "Map_Author",
+        "Map_Date",
+        "Angle",
+        "Distance",
+        "Perp_meters",
+        "Latitude",
+        "Longitude",
+        "Datum"
+      ],
+      "obs_field_types": [
+        "TEXT",
+        "TEXT",
+        "SHORT",
+        "SHORT",
+        "TEXT",
+        "TEXT",
+        "TEXT",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "TEXT"
+      ],
+      "obs_field_map": [
+        0,
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        6,
+        7,
+        8
+      ],
+      "obs_key_indexes": [
+        0,
+        11,
+        10
+      ]
     }
   }
 }
