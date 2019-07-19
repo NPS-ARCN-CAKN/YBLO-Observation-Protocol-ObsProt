@@ -1,10 +1,10 @@
 {
   "meta-name": "NPS-Protocol-Specification",
   "meta-version": 2,
-  "name": "YB02 ARCN YBLO Survey Deliverables - ObpsProt V.3.0",
+  "name": "YB02 ARCN YBLO Survey Data Deliverable-ObpsProt V.3.01",
   "version": 3,
-  "date": "2019-07-17",
-  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.0",
+  "date": "2019-07-17 1611",
+  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.01",
   "gps_interval": 1,
   "mission": {
     "attributes": [
