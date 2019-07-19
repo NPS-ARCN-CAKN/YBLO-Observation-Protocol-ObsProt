@@ -572,17 +572,26 @@
           {
             "elements": [
               {
-                "title":"Species",
-                "type": "QSegmentedElement",
+                "type": "QRadioElement",
                 "key": "IncSpecies",
                 "bind": "selectedItem:IncSpecies",
-                "items": ["","Black Bear","Brown Bear","Dall sheep","Moose","Muskox","Wolverine","Other-See notes"]
+                "items": [
+                  "",
+                  "Black bear",
+                  "Brown bear",
+                  "Caribou",
+                  "Moose",
+                  "Muskox",
+                  "Wolverine",
+                  "Other-see notes"
+                ],
+                "title": "Species"
               },
               {
                 "key": "IncCount",
                 "bind": "numberValue:IncCount",
                 "type": "QIntegerElement",
-                "title": "Number of incidental species"
+                "title": "Count"
               },
               {
                 "key": "IncNotes",
