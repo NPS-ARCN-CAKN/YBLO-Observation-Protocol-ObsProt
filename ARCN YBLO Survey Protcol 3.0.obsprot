@@ -528,8 +528,12 @@
       "name": "Incidental observations",
       "attributes": [
         {
-          "name": "IncSpecies",
-          "type": 700
+          "type": "QSegmentedElement",
+          "key": "IncSpecies",
+          "bind": "selectedItem:IncSpecies",
+          "items": [
+            "","Black Bear","Brown Bear","Dall sheep","Moose","Muskox","Wolverine","Other-See notes"            
+          ]
         },
         {
           "name": "IncCount",
