@@ -528,12 +528,8 @@
       "name": "Incidental observations",
       "attributes": [
         {
-          "type": "QSegmentedElement",
-          "key": "IncSpecies",
-          "bind": "selectedItem:IncSpecies",
-          "items": [
-            "","Black Bear","Brown Bear","Dall sheep","Moose","Muskox","Wolverine","Other-See notes"            
-          ]
+          "name": "IncSpecies",
+          "type": 700
         },
         {
           "name": "IncCount",
@@ -576,10 +572,11 @@
           {
             "elements": [
               {
+                "title":"Species",
+                "type": "QSegmentedElement",
                 "key": "IncSpecies",
                 "bind": "selectedItem:IncSpecies",
-                "type": "QEntryElement",
-                "title": "Incidental species"
+                "items": ["","Black Bear","Brown Bear","Dall sheep","Moose","Muskox","Wolverine","Other-See notes"]
               },
               {
                 "key": "IncCount",
