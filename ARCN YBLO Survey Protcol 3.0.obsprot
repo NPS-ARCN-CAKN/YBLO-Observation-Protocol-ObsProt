@@ -475,13 +475,8 @@
 				"type": "simple",
 				"symbol": {
 					"type": "esriSMS",
-					"style": "esriSMSCircle",
-					"color": [
-						255,
-						255,
-						0,
-						255
-					],
+					"style": "esriSMSSquare",
+					"color": [255,51,153,255],
 					"size": 18,
 					"outline": {
 						"color": [
@@ -573,12 +568,12 @@
 				"type": "simple",
 				"symbol": {
 					"type": "esriSMS",
-					"style": "esriSMSCircle",
+					"style": "esriSMSTriangle",
 					"color": [
 						255,
-						255,
 						0,
-						255
+						255,
+						0
 					],
 					"size": 18,
 					"outline": {
