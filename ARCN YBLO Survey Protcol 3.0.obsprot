@@ -3,8 +3,8 @@
   "meta-version": 2,
   "name": "YB02 ARCN YBLO Survey",
   "version": 3,
-  "date": "2019-07-17 1630",
-  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.02",
+  "date": "2019-07-22 1630",
+  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.03",
   "gps_interval": 1,
   "mission": {
     "attributes": [
@@ -525,7 +525,7 @@
       }
     },
     {
-      "name": "IncidentalObs",
+      "name": "IncidentalObservations",
       "attributes": [
         {
           "name": "IncSpecies",
@@ -566,7 +566,7 @@
         }
       ],
       "dialog": {
-        "title": "Incidental species",
+        "title": "IncidentalObservations",
         "grouped": false,
         "sections": [
           {
