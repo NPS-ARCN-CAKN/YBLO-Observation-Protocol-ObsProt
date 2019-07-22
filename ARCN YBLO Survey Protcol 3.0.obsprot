@@ -91,12 +91,7 @@
 						"key": "ws",
 						"bind": "selectedItem:WindSpeed",
 						"title": "Wind Speed",
-						"items": [
-							">15 knots",
-							"10-14 knots",
-							"9-5 knots",
-							"<5 knots"
-						]
+						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
 					},
 					{
 						"type": "QEntryElement",
