@@ -4,7 +4,7 @@
 	"name": "YB02 ARCN YBLO Survey",
 	"version": 3,
 	"date": "2019-07-22 1102",
-	"description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.08",
+	"description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.09",
 	"gps_interval": 1,
 	"mission": {
 		"attributes": [{
@@ -466,7 +466,7 @@
             {"type": "QRadioElement","key": "HydrologyChange","bind": "selectedItem:HydrologyChange","title": "Hydrology Change","items": ["0 = Lake is missing","1 = 1 lake actually now 2","2 = 2 lakes actually now 1"]},
             {"type": "QRadioElement","key": "DrainageClass","bind": "selectedItem:DrainageClass","title": "Drainage Class","items": ["0 = No observed drainage","1 = 1-25%","2 = 25-50%","3 = 50-75%","4 = >75%","5 = 100%"]},
             {"key": "Monitor","bind": "boolValue:Monitor","type": "QBooleanElement","title": "Monitor?","boolValue": 0},
-            {"type": "QLabelElement","title": "Drainage Type"},{"key": "DrainageType","bind": "selectedItem:DrainageType","type": "QSegmentedElement","items": ["Emergent vegetation","Mud flat","Barren","Puddles"]},
+            {"type": "QLabelElement","title": "Drainage attributes"},{"key": "DrainageType","bind": "selectedItem:DrainageType","type": "QSegmentedElement","items": ["Emergent vegetation","Mud flat","Barren","Puddles"]},
             {"type": "QLabelElement","title": "Lateral Outlet Type"},{"key": "LateralOutletType","bind": "selectedItem:LateralOutletType","type": "QSegmentedElement","items": ["Talik","Lateral gully","Trickles","Other"]},
             {"key": "RetrogressiveThaw","bind": "boolValue:RetrogressiveThaw","type": "QBooleanElement","title": "Retrogressive Thaw?","boolValue": 0},
             {"key": "MurkyWater","bind": "boolValue:MurkyWater","type": "QBooleanElement","title": "Murky Water?","boolValue": 0},
