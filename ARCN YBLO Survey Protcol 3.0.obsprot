@@ -476,15 +476,10 @@
 				"symbol": {
 					"type": "esriSMS",
 					"style": "esriSMSSquare",
-					"color": [255,51,153,255],
+					"color": [51,153,255,255],
 					"size": 18,
 					"outline": {
-						"color": [
-							0,
-							0,
-							0,
-							255
-						],
+						"color": [0,0,0,255],
 						"width": 1
 					}
 				}
@@ -569,20 +564,10 @@
 				"symbol": {
 					"type": "esriSMS",
 					"style": "esriSMSTriangle",
-					"color": [
-						255,
-						0,
-						255,
-						0
-					],
+          "color": [255,0,255,255],
 					"size": 18,
 					"outline": {
-						"color": [
-							0,
-							0,
-							0,
-							255
-						],
+            "color": [0,0,0,255],
 						"width": 1
 					}
 				}
