@@ -4,7 +4,7 @@
   "name": "YB02 ARCN YBLO Survey",
   "version": 3,
   "date": "2019-07-22 1630",
-  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.03",
+  "description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.04",
   "gps_interval": 1,
   "mission": {
     "attributes": [
