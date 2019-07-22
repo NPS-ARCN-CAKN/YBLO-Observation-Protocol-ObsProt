@@ -412,7 +412,7 @@
               },
               {
                 "type": "QRadioElement",
-                "title": "Hydrology change",
+                "title": "Hydr. change",
                 "key": "HydrologyCode",
                 "bind": "selectedItem:HydrologyCode",
                 "items": [
@@ -434,11 +434,11 @@
                   "4->75%",
                   "5-100%"
                 ],
-                "title": "Lake drainage amount"
+                "title": "Lk dr amt"
               },
               {
                 "type": "QBooleanElement",
-                "title": "Flag lake for hydrological changes?",
+                "title": "Flag lk",
                 "key": "Lake_Monitor",
                 "bind": "boolValue:Lake_Monitor",
                 "boolValue": 0
@@ -454,13 +454,13 @@
                   "Barren",
                   "Puddles"
                 ],
-                "title": "Lake drainage attributes"
+                "title": "Lk dr attr"
               },
               {
                 "type": "QRadioElement",
                 "key": "Lake_LateralOutletType",
                 "bind": "selectedItem:Lake_LateralOutletType",
-                "title": "Lake outlet type",
+                "title": "Lk outlet",
                 "items": [
                   "Talik",
                   "Lateral gully",
@@ -470,7 +470,7 @@
               },
               {
                 "type": "QRadioElement",
-                "title": "Other lake drainage characteristics",
+                "title": "Lk dr char.",
                 "key": "Lake_DrainageCharacteristics",
                 "bind": "selectedItem:Lake_DrainageCharacteristics",
                 "items": [
