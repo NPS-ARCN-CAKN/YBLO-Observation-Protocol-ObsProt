@@ -3,14 +3,11 @@
 	"meta-version": 2,
 	"name": "YB02 ARCN YBLO Survey",
 	"version": 3,
-	"date": "2019-07-22 1102",
-	"description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.09",
+	"date": "2019-07-22 16:13",
+	"description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.10",
 	"gps_interval": 1,
 	"mission": {
-		"attributes": [{
-				"name": "Plot",
-				"type": 700
-			},
+		"attributes": [
 			{
 				"name": "TailNo",
 				"type": 700
@@ -52,14 +49,7 @@
 			"title": "Mission Properties",
 			"grouped": true,
 			"sections": [{
-				"elements": [{
-						"type": "QEntryElement",
-						"key": "p",
-						"bind": "textValue:Plot",
-						"title": "Plot #",
-						"placeholder": "Plot #",
-						"autocorrectionType": "No"
-					},
+				"elements": [
 					{
 						"type": "QEntryElement",
 						"key": "tn",
@@ -204,7 +194,12 @@
 	},
 	"features": [{
 			"name": "Loons",
-			"attributes": [{
+			"attributes": [
+        {
+					"name": "Plot",
+					"type": 700
+				},
+        {
 					"name": "Lake",
 					"type": 700
 				},
@@ -277,7 +272,14 @@
 				"title": "Loons",
 				"grouped": false,
 				"sections": [{
-					"elements": [{
+					"elements": [
+            {
+							"type": "QEntryElement",
+							"title": "Plot",
+							"key": "Plot",
+							"bind": "textValue:Plot"
+						},
+            {
 							"type": "QEntryElement",
 							"title": "Lake",
 							"key": "Lake",
@@ -453,7 +455,7 @@
 				}
 			],
 			"dialog": {
-				"title": "Lake",
+				"title": "LakeChanges",
 				"grouped": false,
 				"sections": [{
 					"elements": [
