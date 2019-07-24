@@ -345,18 +345,10 @@
 							"title": "Chicks"
 						},
 						{
-							"type": "QLabelElement",
-							"title": "Eggs"
-						},
-						{
-							"type": "QSegmentedElement",
+							"type": "QIntegerElement",
 							"key": "Eggs",
-							"bind": "selectedItem:Eggs",
-							"items": [
-								"0",
-								"1",
-								"2"
-							]
+							"bind": "numberValue:Eggs",
+							"title": "Eggs"
 						},
 						{
 							"type": "QLabelElement",
