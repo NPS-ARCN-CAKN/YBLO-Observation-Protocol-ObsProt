@@ -1,8 +1,8 @@
 {
 	"meta-name": "NPS-Protocol-Specification",
 	"meta-version": 2,
-	"name": "ARCN YBLO Survey Protocol",
-	"version": 3,
+	"name": "ARCN YBLO",
+	"version": 3.11,
 	"date": "2019-07-23",
 	"description": "NPS Arctic Network Yellow-billed Loon Observation Protocol Version 3.11",
 	"gps_interval": 1,
@@ -55,18 +55,20 @@
 			"sections": [{
 				"elements": [
 					{
-							"type": "QEntryElement",
-							"title": "Plot",
-							"key": "Plot",
-							"bind": "textValue:Plot"
+						"type": "QEntryElement",
+						"title": "Plot",
+						"key": "Plot",
+						"bind": "textValue:Plot",
+						"placeholder": "Plot #"
 					},
 					{
 						"type": "QEntryElement",
+						"title": "Tail #",
 						"key": "tn",
 						"bind": "textValue:TailNo",
-						"title": "Tail #",
 						"placeholder": "Tail #",
 						"autocorrectionType": "No"
+						"autocapitalizationType": "AllCharacters"
 					},
 					{
 						"type": "QEntryElement",
@@ -287,13 +289,15 @@
 							"type": "QEntryElement",
 							"title": "Plot",
 							"key": "Plot",
-							"bind": "textValue:Plot"
+							"bind": "textValue:Plot",
+							"placeholder": "Plot #"
 						},
             			{
 							"type": "QEntryElement",
 							"title": "Lake",
 							"key": "Lake",
-							"bind": "textValue:Lake"
+							"bind": "textValue:Lake",
+							"placeholder": "Lake #"
 						},
 						{
 							"type": "QRadioElement",
@@ -467,17 +471,17 @@
 				"grouped": false,
 				"sections": [{
 					"elements": [
-            {"key": "Lake","bind": "textValue:Lake","type": "QEntryElement","title": "Lake"},
-            {"type": "QRadioElement","key": "HydrologyChange","bind": "selectedItem:HydrologyChange","title": "Hydrology Change","items": ["0 = Lake is missing","1 = 1 lake actually now 2","2 = 2 lakes actually now 1"]},
-            {"type": "QRadioElement","key": "DrainageClass","bind": "selectedItem:DrainageClass","title": "Drainage Class","items": ["0 = No observed drainage","1 = 1-25%","2 = 25-50%","3 = 50-75%","4 = >75%","5 = 100%"]},
-            {"key": "Monitor","bind": "boolValue:Monitor","type": "QBooleanElement","title": "Monitor?","boolValue": 0},
-            {"type": "QLabelElement","title": "Drainage attributes"},{"key": "DrainageType","bind": "selectedItem:DrainageType","type": "QSegmentedElement","items": ["Emergent vegetation","Mud flat","Barren","Puddles"]},
-            {"type": "QLabelElement","title": "Lateral Outlet Type"},{"key": "LateralOutletType","bind": "selectedItem:LateralOutletType","type": "QSegmentedElement","items": ["Talik","Lateral gully","Trickles","Other"]},
-            {"key": "RetrogressiveThaw","bind": "boolValue:RetrogressiveThaw","type": "QBooleanElement","title": "Retrogressive Thaw?","boolValue": 0},
-            {"key": "MurkyWater","bind": "boolValue:MurkyWater","type": "QBooleanElement","title": "Murky Water?","boolValue": 0},
-            {"key": "Slump","bind": "boolValue:Slump","type": "QBooleanElement","title": "Slump?","boolValue": 0},
-            {"key": "StreamFlow","bind": "boolValue:StreamFlow","type": "QBooleanElement","title": "Stream Flow?","boolValue": 0},
-            {"key": "LakeNotes","bind": "textValue:LakeNotes","type": "QEntryElement","title": "LakeNotes"}
+						{"key": "Lake","bind": "textValue:Lake","type": "QEntryElement","title": "Lake"},
+						{"type": "QRadioElement","key": "HydrologyChange","bind": "selectedItem:HydrologyChange","title": "Hydrology Change","items": ["0 = Lake is missing","1 = 1 lake actually now 2","2 = 2 lakes actually now 1"]},
+						{"type": "QRadioElement","key": "DrainageClass","bind": "selectedItem:DrainageClass","title": "Drainage Class","items": ["0 = No observed drainage","1 = 1-25% Drained","2 = 25-50% Drained","3 = 50-75% Drained","4 = >75% Drained","5 = 100% Drained"]},
+						{"key": "Monitor","bind": "boolValue:Monitor","type": "QBooleanElement","title": "Monitor?","boolValue": 0},
+						{"type": "QLabelElement","title": "Drainage attributes"},{"key": "DrainageType","bind": "selectedItem:DrainageType","type": "QSegmentedElement","items": ["Emergent vegetation","Mud flat","Barren","Puddles"]},
+						{"type": "QLabelElement","title": "Lateral Outlet Type"},{"key": "LateralOutletType","bind": "selectedItem:LateralOutletType","type": "QSegmentedElement","items": ["Talik","Lateral gully","Trickles","Other"]},
+						{"key": "RetrogressiveThaw","bind": "boolValue:RetrogressiveThaw","type": "QBooleanElement","title": "Retrogressive Thaw?","boolValue": 0},
+						{"key": "MurkyWater","bind": "boolValue:MurkyWater","type": "QBooleanElement","title": "Murky Water?","boolValue": 0},
+						{"key": "Slump","bind": "boolValue:Slump","type": "QBooleanElement","title": "Slump?","boolValue": 0},
+						{"key": "StreamFlow","bind": "boolValue:StreamFlow","type": "QBooleanElement","title": "Stream Flow?","boolValue": 0},
+						{"key": "LakeNotes","bind": "textValue:LakeNotes","type": "QEntryElement","title": "LakeNotes"}
 					]
 				}]
 			},
