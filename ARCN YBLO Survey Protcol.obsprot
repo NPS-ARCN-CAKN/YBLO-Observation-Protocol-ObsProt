@@ -67,7 +67,7 @@
 						"key": "tn",
 						"bind": "textValue:TailNo",
 						"placeholder": "Tail #",
-						"autocorrectionType": "No"
+						"autocorrectionType": "No",
 						"autocapitalizationType": "AllCharacters"
 					},
 					{
