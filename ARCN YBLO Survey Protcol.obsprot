@@ -6,6 +6,8 @@
 	"date": "2019-07-26",
 	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
 	"gps_interval": 1,
+	"observing":"Observing",
+	"notobserving":"Not observing",
 	"mission": {
 		"attributes": [
 			{
