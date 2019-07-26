@@ -59,7 +59,7 @@
 					{
 						"type": "QEntryElement",
 						"title": "Plot",
-						"key": "Plot",
+						"key": "plt",
 						"bind": "textValue:Plot",
 						"placeholder": "Plot #"
 					},
@@ -425,18 +425,19 @@
 		},
 		{
 			"name": "Lake",
+			"allow_off_transect_observations",true,
 			"attributes": [
-        {"name": "Lake","type": 700},
-        {"name": "HydrologyChange","type": 700},
-        {"name": "DrainageClass","type": 700},
-        {"name": "Monitor","type": 800},
-        {"name": "DrainageType","type": 700},
-        {"name": "LateralOutletType","type": 700},
-        {"name": "RetrogressiveThaw","type": 800},
-        {"name": "MurkyWater","type": 800},
-        {"name": "Slump","type": 800},
-        {"name": "StreamFlow","type": 800},
-        {"name": "LakeNotes","type": 700}
+				{"name": "Lake","type": 700},
+				{"name": "HydrologyChange","type": 700},
+				{"name": "DrainageClass","type": 700},
+				{"name": "Monitor","type": 800},
+				{"name": "DrainageType","type": 700},
+				{"name": "LateralOutletType","type": 700},
+				{"name": "RetrogressiveThaw","type": 800},
+				{"name": "MurkyWater","type": 800},
+				{"name": "Slump","type": 800},
+				{"name": "StreamFlow","type": 800},
+				{"name": "LakeNotes","type": 700}
 			],
 			"locations": [{
 					"type": "gps",
@@ -497,6 +498,7 @@
 		},
 		{
 			"name": "IncidentalObservations",
+			"allow_off_transect_observations",true,
 			"attributes": [{
 					"type": 700,
 					"name": "IncSpecies"
