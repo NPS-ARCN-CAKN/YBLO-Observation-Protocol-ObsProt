@@ -425,7 +425,7 @@
 		},
 		{
 			"name": "Lake",
-			"allow_off_transect_observations",true,
+			"allow_off_transect_observations":true,
 			"attributes": [
 				{"name": "Lake","type": 700},
 				{"name": "HydrologyChange","type": 700},
@@ -498,7 +498,7 @@
 		},
 		{
 			"name": "IncidentalObservations",
-			"allow_off_transect_observations",true,
+			"allow_off_transect_observations":true,
 			"attributes": [{
 					"type": 700,
 					"name": "IncSpecies"
