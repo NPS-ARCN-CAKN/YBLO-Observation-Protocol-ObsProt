@@ -295,17 +295,13 @@
 							"key": "SpeciesAcronym",
 							"bind": "selectedItem:SpeciesAcronym",
 							"items": [
-								"ARLO",
-								"ARTE",
-								"ALTE",
+								"ARLO",,
 								"COLO",
 								"PALO",
-								"RNGR",
 								"RTLO",
-								"TERN",
-								"TUSW",
 								"UNLO",
-								"YBLO"
+								"YBLO",
+								"UNLO"
 							],
 							"title": "Species"
 						},
