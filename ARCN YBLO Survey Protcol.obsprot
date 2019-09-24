@@ -276,11 +276,37 @@
 				"grouped": false,
 				"sections": [{
 					"elements": [
-            			{
-							"type": "QEntryElement",
-							"title": "Plot",
+						{
+							"type": "QRadioElement",
 							"key": "Plot",
-							"bind": "textValue:Plot",
+							"bind": "selectedItem:Plot",
+							"items": [
+								"1",
+								"2",
+								"3",
+								"4",
+								"5",
+								"6",
+								"7",
+								"8",
+								"9",
+								"10",
+								"11",
+								"12",
+								"13",
+								"14",
+								"15",
+								"16",
+								"17",
+								"18",
+								"19",
+								"20",
+								"21",
+								"22",
+								"23",
+								"24"
+							],
+							"title": "Plot",
 							"placeholder": "Plot #"
 						},
             			{
@@ -295,7 +321,7 @@
 							"key": "SpeciesAcronym",
 							"bind": "selectedItem:SpeciesAcronym",
 							"items": [
-								"ARLO",,
+								"ARLO",
 								"COLO",
 								"PALO",
 								"RTLO",
@@ -542,7 +568,7 @@
 								"TERN",
 								"TUSW",
 								"UNLO",
-								"YBLO"
+								"YBLO",
 								"Black bear",
 								"Brown bear",
 								"Caribou",
