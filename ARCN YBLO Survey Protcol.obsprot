@@ -11,10 +11,6 @@
 	"mission": {
 		"attributes": [
 			{
-				"name": "Plot",
-				"type": 700
-			},
-			{
 				"name": "TailNo",
 				"type": 700
 			},
@@ -56,13 +52,6 @@
 			"grouped": true,
 			"sections": [{
 				"elements": [
-					{
-						"type": "QEntryElement",
-						"title": "Plot",
-						"key": "plt",
-						"bind": "textValue:Plot",
-						"placeholder": "Plot #"
-					},
 					{
 						"type": "QEntryElement",
 						"title": "Tail #",
