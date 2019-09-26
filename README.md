@@ -1,4 +1,4 @@
-# ARCN Loons Monitoring obsprot Repository.
+# ARCN Loons Monitoring Park Observer Protocol (obsprot) Repository.
 ## National Park Service Arctic Inventory and Monitoring Network
 The NPS Yellow-billed loons monitoring program relies on NPS Park Observer software for field data collection. The software relies on an observation protocol (.obsprot) file to define what data is collected. This repository contains the most current .obsprot file used for loon surveys. More information on our loon monitoring program is at https://www.nps.gov/im/arcn/ybl.htm.
 
