@@ -239,10 +239,6 @@
 					"type": 700
 				},
 				{
-					"name": "Waypoint",
-					"type": 700
-				},
-				{
 					"name": "ObservationNotes",
 					"type": 700
 				}
@@ -392,14 +388,6 @@
 								"Flushed",
 								"By nest"
 							]
-						},
-						{
-							"type": "QEntryElement",
-							"key": "Waypoint",
-							"bind": "textValue:Waypoint",
-							"title": "Waypoint",
-							"placeholder": "Waypoint",
-							"autocorrectionType": "No"
 						},
 						{
 							"type": "QMultilineElement",
