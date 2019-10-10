@@ -2,8 +2,8 @@
 	"meta-name": "NPS-Protocol-Specification",
 	"meta-version": 2,
 	"name": "ARCN YBLO",
-	"version": 3.12,
-	"date": "2019-10-10",
+	"version": 3.14,
+	"date": "2019-07-26",
 	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
 	"gps_interval": 1,
 	"observing":"In plot",
@@ -123,16 +123,16 @@
 						"bind": "selectedItem:SkyConditions",
 						"title": "Sky conditions",
 						"items": [
-							"1|Clear to <10% cloud cover",
-							"2|Partly cloudy; 10-50% cloud cover",
-							"3|Cloudy;  51-90% cloud cover",
-							"4|Overcast; >90% cloud cover",
-							"5|Fog or smoke",
-							"6|Drizzle",
-							"7|Showers",
-							"8|Rain",
-							"9|Sleet",
-							"10|Light snow"
+							"1-Clear to <10% cloud cover",
+							"2-Partly cloudy; 10-50% cloud cover",
+							"3-Cloudy;  51-90% cloud cover",
+							"4-Overcast; >90% cloud cover",
+							"5-Fog or smoke",
+							"6-Drizzle",
+							"7-Showers",
+							"8-Rain",
+							"9-Sleet",
+							"10-Light snow"
 						]
 					},
 					{
