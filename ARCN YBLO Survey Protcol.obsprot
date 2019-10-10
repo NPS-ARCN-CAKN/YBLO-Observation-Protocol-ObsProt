@@ -20,6 +20,14 @@
 				"type": 700
 			},
 			{
+				"name": "Observer",
+				"type": 700
+			},
+			{
+				"name": "Pilot",
+				"type": 700
+			},
+			{
 				"name": "SkyConditions",
 				"type": 700
 			},
@@ -28,12 +36,12 @@
 				"type": 100
 			},
 			{
-				"name": "Observer",
-				"type": 700
+				"name": "Waves",
+				"type": 800
 			},
 			{
-				"name": "Pilot",
-				"type": 700
+				"name": "Whitecaps",
+				"type": 800
 			},
 			{
 				"name": "Aircraft",
@@ -46,6 +54,10 @@
 			{
 				"name": "Temp",
 				"type": 100
+			},
+			{
+				"name": "SurveyAbandoned",
+				"type": 800
 			},
 			{
 				"name": "PlotNotes",
@@ -141,6 +153,20 @@
 						"bind": "selectedItem:WindSpeed",
 						"title": "Wind Speed",
 						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Waves",
+						"bind": "boolValue:Waves",
+						"title": "Waves?",
+						"boolValue": 0
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Whitecaps",
+						"bind": "boolValue:Whitecaps",
+						"title": "Whitecaps?",
+						"boolValue": 0
 					},					
 					{
 						"type": "QEntryElement",
@@ -157,6 +183,13 @@
 						"bind": "textValue:AirSpeed",
 						"placeholder": "AirSpeed",
 						"autocorrectionType": "No"
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "SurveyAbandoned",
+						"bind": "boolValue:SurveyAbandoned",
+						"title": "SurveyAbandoned?",
+						"boolValue": 0
 					},
 					{
 						"type": "QMultilineElement",
