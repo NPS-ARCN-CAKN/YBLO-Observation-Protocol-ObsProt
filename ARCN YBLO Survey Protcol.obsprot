@@ -50,6 +50,14 @@
 			{
 				"name": "PlotNotes",
 				"type": 700
+			},
+			{
+				"name": "Waves",
+				"type": 800
+			},
+			{
+				"name": "Whitecaps",
+				"type": 800
 			}
 		],
 		"dialog": {
@@ -123,16 +131,16 @@
 						"bind": "selectedItem:SkyConditions",
 						"title": "Sky conditions",
 						"items": [
-							"1-Clear to <10% cloud cover",
-							"2-Partly cloudy; 10-50% cloud cover",
-							"3-Cloudy;  51-90% cloud cover",
-							"4-Overcast; >90% cloud cover",
-							"5-Fog or smoke",
-							"6-Drizzle",
-							"7-Showers",
-							"8-Rain",
-							"9-Sleet",
-							"10-Light snow"
+							"1|Clear to <10% cloud cover",
+							"2|Partly cloudy; 10|50% cloud cover",
+							"3|Cloudy;  51-90% cloud cover",
+							"4|Overcast; >90% cloud cover",
+							"5|Fog or smoke",
+							"6|Drizzle",
+							"7|Showers",
+							"8|Rain",
+							"9|Sleet",
+							"10|Light snow"
 						]
 					},
 					{
@@ -141,6 +149,20 @@
 						"bind": "selectedItem:WindSpeed",
 						"title": "Wind Speed",
 						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Waves",
+						"bind": "boolValue:Waves",
+						"title": "Waves?",
+						"boolValue": 0
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Whitecaps",
+						"bind": "boolValue:Whitecaps",
+						"title": "Whitecaps?",
+						"boolValue": 0
 					},					
 					{
 						"type": "QEntryElement",
