@@ -2,7 +2,7 @@
 	"meta-name": "NPS-Protocol-Specification",
 	"meta-version": 2,
 	"name": "ARCN YBLO",
-	"version": 3.12,
+	"version": 3.13,
 	"date": "2019-07-26",
 	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
 	"gps_interval": 1,
