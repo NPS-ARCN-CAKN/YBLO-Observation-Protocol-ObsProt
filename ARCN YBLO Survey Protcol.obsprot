@@ -2,8 +2,8 @@
 	"meta-name": "NPS-Protocol-Specification",
 	"meta-version": 2,
 	"name": "ARCN YBLO",
-	"version": 3.13,
-	"date": "2019-07-26",
+	"version": 3.12,
+	"date": "2019-10-10",
 	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
 	"gps_interval": 1,
 	"observing":"In plot",
@@ -20,14 +20,6 @@
 				"type": 700
 			},
 			{
-				"name": "Observer",
-				"type": 700
-			},
-			{
-				"name": "Pilot",
-				"type": 700
-			},
-			{
 				"name": "SkyConditions",
 				"type": 700
 			},
@@ -36,12 +28,12 @@
 				"type": 100
 			},
 			{
-				"name": "Waves",
-				"type": 800
+				"name": "Observer",
+				"type": 700
 			},
 			{
-				"name": "Whitecaps",
-				"type": 800
+				"name": "Pilot",
+				"type": 700
 			},
 			{
 				"name": "Aircraft",
@@ -54,10 +46,6 @@
 			{
 				"name": "Temp",
 				"type": 100
-			},
-			{
-				"name": "SurveyAbandoned",
-				"type": 800
 			},
 			{
 				"name": "PlotNotes",
@@ -135,16 +123,16 @@
 						"bind": "selectedItem:SkyConditions",
 						"title": "Sky conditions",
 						"items": [
-							"1-Clear to <10% cloud cover",
-							"2-Partly cloudy; 10-50% cloud cover",
-							"3-Cloudy;  51-90% cloud cover",
-							"4-Overcast; >90% cloud cover",
-							"5-Fog or smoke",
-							"6-Drizzle",
-							"7-Showers",
-							"8-Rain",
-							"9-Sleet",
-							"10-Light snow"
+							"1|Clear to <10% cloud cover",
+							"2|Partly cloudy; 10-50% cloud cover",
+							"3|Cloudy;  51-90% cloud cover",
+							"4|Overcast; >90% cloud cover",
+							"5|Fog or smoke",
+							"6|Drizzle",
+							"7|Showers",
+							"8|Rain",
+							"9|Sleet",
+							"10|Light snow"
 						]
 					},
 					{
@@ -153,20 +141,6 @@
 						"bind": "selectedItem:WindSpeed",
 						"title": "Wind Speed",
 						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
-					},
-					{
-						"type": "QBooleanElement",
-						"key": "Waves",
-						"bind": "boolValue:Waves",
-						"title": "Waves?",
-						"boolValue": 0
-					},
-					{
-						"type": "QBooleanElement",
-						"key": "Whitecaps",
-						"bind": "boolValue:Whitecaps",
-						"title": "Whitecaps?",
-						"boolValue": 0
 					},					
 					{
 						"type": "QEntryElement",
@@ -183,13 +157,6 @@
 						"bind": "textValue:AirSpeed",
 						"placeholder": "AirSpeed",
 						"autocorrectionType": "No"
-					},
-					{
-						"type": "QBooleanElement",
-						"key": "SurveyAbandoned",
-						"bind": "boolValue:SurveyAbandoned",
-						"title": "SurveyAbandoned?",
-						"boolValue": 0
 					},
 					{
 						"type": "QMultilineElement",
