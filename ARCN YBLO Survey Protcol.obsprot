@@ -312,12 +312,12 @@
 				},
 				{
 					"type": "mapTouch",
-					"default": false,
+					"default": true,
 					"allow": true
 				},
 				{
 					"type": "angleDistance",
-					"default": true,
+					"default": false,
 					"allow": false,
 					"units": "meters",
 					"direction": "cw",
