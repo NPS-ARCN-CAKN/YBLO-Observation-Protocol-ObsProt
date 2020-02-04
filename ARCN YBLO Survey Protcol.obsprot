@@ -2,8 +2,8 @@
 	"meta-name": "NPS-Protocol-Specification",
 	"meta-version": 2,
 	"name": "ARCN YBLO",
-	"version": 3.15,
-	"date": "2019-10-10",
+	"version": 3.16,
+	"date": "2020-02-04",
 	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
 	"gps_interval": 1,
 	"observing":"In plot",
@@ -101,7 +101,7 @@
 					{
 						"type": "QEntryElement",
 						"title": "Tail #",
-						"key": "tn",
+						"key": "TailNo",
 						"bind": "textValue:TailNo",
 						"placeholder": "Tail #",
 						"autocorrectionType": "No",
@@ -109,7 +109,7 @@
 					},
 					{
 						"type": "QEntryElement",
-						"key": "r",
+						"key": "Observer",
 						"bind": "textValue:Observer",
 						"title": "Observer initials",
 						"placeholder": "Observer initials",
@@ -118,7 +118,7 @@
 					},
 					{
 						"type": "QEntryElement",
-						"key": "pi",
+						"key": "Pilot",
 						"bind": "textValue:Pilot",
 						"title": "Pilot initials",
 						"placeholder": "Pilot initials",
@@ -127,7 +127,7 @@
 					},
 					{
 						"type": "QRadioElement",
-						"key": "w",
+						"key": "SkyConditions",
 						"bind": "selectedItem:SkyConditions",
 						"title": "Sky conditions",
 						"items": [
@@ -145,7 +145,7 @@
 					},
 					{
 						"type": "QRadioElement",
-						"key": "ws",
+						"key": "WindSpeed",
 						"bind": "selectedItem:WindSpeed",
 						"title": "Wind Speed",
 						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
@@ -166,7 +166,7 @@
 					},					
 					{
 						"type": "QEntryElement",
-						"key": "v1",
+						"key": "Aircraft",
 						"bind": "textValue:Aircraft",
 						"title": "Aircraft",
 						"placeholder": "Aircraft",
@@ -182,7 +182,7 @@
 					},
 					{
 						"type": "QMultilineElement",
-						"key": "c",
+						"key": "PlotNotes",
 						"bind": "textValue:PlotNotes",
 						"title": "Comments"
 					}
