@@ -257,7 +257,7 @@
 	},
 	"features": [{
 			"name": "Loons",
-			"allow_off_transect_observations":false,
+			"allow_off_transect_observations":true,
 			"attributes": [
         		{
 					"name": "Lake",
