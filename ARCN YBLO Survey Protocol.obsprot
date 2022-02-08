@@ -1,782 +1,208 @@
 {
-	"meta-name": "NPS-Protocol-Specification",
-	"meta-version": 2,
-	"name": "ARCN YBLO",
-	"version": 3.17,
-	"date": "2020-02-04",
-	"description": "NPS Arctic Network Yellow-billed Loon Survey Protocol",
-	"gps_interval": 1,
-	"observing":"In plot",
-	"notobserving":"Not in plot",
-	"cancel_on_top": true,
-	"mission": {
-		"attributes": [
-			{
-				"name": "Plot",
-				"type": 700
-			},
-			{
-				"name": "TailNo",
-				"type": 700
-			},
-			{
-				"name": "SkyConditions",
-				"type": 700
-			},
-			{
-				"name": "WindSpeed",
-				"type": 100
-			},
-			{
-				"name": "Observer",
-				"type": 700
-			},
-			{
-				"name": "Pilot",
-				"type": 700
-			},
-			{
-				"name": "Aircraft",
-				"type": 700
-			},
-			{
-				"name": "AirSpeed",
-				"type": 100
-			},
-			{
-				"name": "Temp",
-				"type": 100
-			},
-			{
-				"name": "PlotNotes",
-				"type": 700
-			},
-			{
-				"name": "Waves",
-				"type": 800
-			},
-			{
-				"name": "Whitecaps",
-				"type": 800
-			}
-		],
-		"dialog": {
-			"title": "Mission Properties",
-			"grouped": true,
-			"sections": [{
-				"elements": [
-					{
-						"type": "QEntryElement",
-						"title": "Plot",
-						"key": "Plot",
-						"bind": "textValue:Plot",
-						"placeholder": "Tail #",
-						"autocorrectionType": "No",
-						"autocapitalizationType": "AllCharacters"
-					},
-					{
-						"type": "QEntryElement",
-						"title": "Tail #",
-						"key": "TailNo",
-						"bind": "textValue:TailNo",
-						"placeholder": "Tail #",
-						"autocorrectionType": "No",
-						"autocapitalizationType": "AllCharacters"
-					},
-					{
-						"type": "QEntryElement",
-						"key": "Observer",
-						"bind": "textValue:Observer",
-						"title": "Observer initials",
-						"placeholder": "Observer initials",
-						"autocorrectionType": "No",
-						"autocapitalizationType": "AllCharacters"
-					},
-					{
-						"type": "QEntryElement",
-						"key": "Pilot",
-						"bind": "textValue:Pilot",
-						"title": "Pilot initials",
-						"placeholder": "Pilot initials",
-						"autocorrectionType": "No",
-						"autocapitalizationType": "AllCharacters"
-					},
-					{
-						"type": "QRadioElement",
-						"key": "SkyConditions",
-						"bind": "selectedItem:SkyConditions",
-						"title": "Sky conditions",
-						"items": [
-							"1|Clear to <10% cloud cover",
-							"2|Partly cloudy; 10|50% cloud cover",
-							"3|Cloudy;  51-90% cloud cover",
-							"4|Overcast; >90% cloud cover",
-							"5|Fog or smoke",
-							"6|Drizzle",
-							"7|Showers",
-							"8|Rain",
-							"9|Sleet",
-							"10|Light snow"
-						]
-					},
-					{
-						"type": "QRadioElement",
-						"key": "WindSpeed",
-						"bind": "selectedItem:WindSpeed",
-						"title": "Wind Speed",
-						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
-					},
-					{
-						"type": "QBooleanElement",
-						"key": "Waves",
-						"bind": "boolValue:Waves",
-						"title": "Waves?",
-						"boolValue": 0
-					},
-					{
-						"type": "QBooleanElement",
-						"key": "Whitecaps",
-						"bind": "boolValue:Whitecaps",
-						"title": "Whitecaps?",
-						"boolValue": 0
-					},					
-					{
-						"type": "QEntryElement",
-						"key": "Aircraft",
-						"bind": "textValue:Aircraft",
-						"title": "Aircraft",
-						"placeholder": "Aircraft",
-						"autocorrectionType": "No"
-					},
-					{
-						"type": "QEntryElement",
-						"title": "Air speed",
-						"key": "AirSpeed",
-						"bind": "textValue:AirSpeed",
-						"placeholder": "AirSpeed",
-						"autocorrectionType": "No"
-					},
-					{
-						"type": "QMultilineElement",
-						"key": "PlotNotes",
-						"bind": "textValue:PlotNotes",
-						"title": "Comments"
-					}
-				]
-			}]
-		},
-		"symbology": {
-			"type": "simple",
-			"symbol": {
-				"type": "esriSMS",
-				"style": "esriSMSSquare",
-				"color": [
-					0,
-					255,
-					0,
-					255
-				],
-				"size": 13,
-				"outline": {
-					"color": [
-						0,
-						0,
-						0,
-						255
-					],
-					"width": 1
-				}
-			}
-		},
-		"on-symbology": {
-			"type": "simple",
-			"symbol": {
-				"type": "esriSLS",
-				"style": "esriSLSSolid",
-				"color": [
-					255,
-					127,
-					127,
-					255
-				],
-				"width": 0.5
-			}
-		},
-		"off-symbology": {
-			"type": "simple",
-			"symbol": {
-				"type": "esriSLS",
-				"style": "esriSLSDash",
-				"color": [
-					255,
-					255,
-					194,
-					255
-				],
-				"width": 0.5
-			}
-		},
-		"gps-symbology": {
-			"type": "simple",
-			"symbol": {
-				"type": "esriSMS",
-				"style": "esriSMSCircle",
-				"color": [
-					52,
-					152,
-					219,
-					255
-				],
-				"size": 5
-			}
-		}
-	},
-	"features": [{
-			"name": "Loons",
-			"allow_off_transect_observations":true,
-			"attributes": [
-        		{
-					"name": "Lake",
-					"type": 700
-				},
-				{
-					"name": "SpeciesAcronym",
-					"type": 700
-				},
-				{
-					"name": "Count",
-					"type": 100
-				},
-				{
-					"name": "Pairs",
-					"type": 800
-				},
-				{
-					"name": "Nest",
-					"type": 800
-				},
-				{
-					"name": "Chicks",
-					"type": 100
-				},
-				{
-					"name": "Eggs",
-					"type": 100
-				},
-				{
-					"name": "Location",
-					"type": 700
-				},
-				{
-					"name": "Activity",
-					"type": 700
-				},
-				{
-					"name": "ObservationNotes",
-					"type": 700
-				}
-			],
-			"locations": [{
-					"type": "gps",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTarget",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTouch",
-					"default": true,
-					"allow": true
-				},
-				{
-					"type": "angleDistance",
-					"default": false,
-					"allow": false,
-					"units": "meters",
-					"direction": "cw",
-					"deadAhead": 180
-				}
-			],
-			"dialog": {
-				"title": "Loons",
-				"grouped": false,
-				"sections": [{
-					"elements": [
-            			{
-							"type": "QEntryElement",
-							"title": "Lake",
-							"key": "Lake",
-							"bind": "textValue:Lake",
-							"placeholder": "Lake #"
-						},
-						{
-							"type": "QRadioElement",
-							"key": "SpeciesAcronym",
-							"bind": "selectedItem:SpeciesAcronym",
-							"items": [
-								"ARLO",
-								"COLO",
-								"PALO",
-								"RTLO",
-								"UNLO",
-								"YBLO",
-								"UNLO"
-							],
-							"title": "Species"
-						},
-						{
-							"type": "QIntegerElement",
-							"key": "Count",
-							"bind": "numberValue:Count",
-							"title": "Count"
-						},
-						{
-							"type": "QBooleanElement",
-							"key": "Pairs",
-							"bind": "boolValue:Pairs",
-							"title": "Pair?",
-							"boolValue": 0
-						},
-						{
-							"type": "QBooleanElement",
-							"key": "Nest",
-							"bind": "boolValue:Nest",
-							"title": "Nest?",
-							"boolValue": 0
-						},
-						{
-							"type": "QIntegerElement",
-							"key": "Chicks",
-							"bind": "numberValue:Chicks",
-							"title": "Chicks"
-						},
-						{
-							"type": "QIntegerElement",
-							"key": "Eggs",
-							"bind": "numberValue:Eggs",
-							"title": "Eggs"
-						},
-						{
-							"type": "QLabelElement",
-							"title": "Location of nest"
-						},
-						{
-							"type": "QSegmentedElement",
-							"key": "Location",
-							"bind": "selectedItem:Location",
-							"items": [
-								"",
-								"Peninsula",
-								"Shoreline",
-								"Island"
-							]
-						},
-						{
-							"type": "QLabelElement",
-							"title": "Activity"
-						},
-						{
-							"type": "QSegmentedElement",
-							"key": "Activity",
-							"bind": "selectedItem:Activity",
-							"items": [
-								"",
-								"On nest",
-								"Flushed",
-								"By nest"
-							]
-						},
-						{
-							"type": "QMultilineElement",
-							"key": "ObservationNotes",
-							"bind": "textValue:ObservationNotes",
-							"title": "Notes"
-						}
-					]
-				}]
-			},
-			"label":{
-				"field":"Species",
-				"symbol":{
-				"type":"esriTS",
-				"color":[255,0,0,255],
-				"font":{"family":"Arial", "size":24, "weight":"bold", "style":"normal", "decoration":"none"},
-				"verticalAlignment": "bottom",
-				"horizontalAlignment": "left",
-				"xoffset": 10, "yoffset": 20
-				}
-			},
-			"symbology": {
-				"type": "simple",
-				"symbol": {
-					"type": "esriSMS",
-					"style": "esriSMSCircle",
-					"color": [
-						255,
-						255,
-						0,
-						255
-					],
-					"size": 18,
-					"outline": {
-						"color": [
-							0,
-							0,
-							0,
-							255
-						],
-						"width": 1
-					}
-				}
-			},
-			"totalizer": {
-			"fields": ["Lake"],
-			"units": "minutes",
-			"fontsize": 18.0,
-			"includeon": true,
-			"includeoff": false,
-			"includetotal": false
-			}
-		},
-		{
-			"name": "Lake",
-			"allow_off_transect_observations":true,
-			"attributes": [
-				{"name": "Lake","type": 700},
-				{"name": "HydrologyChange","type": 700},
-				{"name": "DrainageClass","type": 700},
-				{"name": "Monitor","type": 800},
-				{"name": "DrainageType","type": 700},
-				{"name": "LateralOutletType","type": 700},
-				{"name": "RetrogressiveThaw","type": 800},
-				{"name": "MurkyWater","type": 800},
-				{"name": "Slump","type": 800},
-				{"name": "StreamFlow","type": 800},
-				{"name": "LakeNotes","type": 700}
-			],
-			"locations": [{
-					"type": "gps",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTarget",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTouch",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "angleDistance",
-					"default": true,
-					"allow": false,
-					"units": "meters",
-					"direction": "cw",
-					"deadAhead": 180
-				}
-			],
-			"dialog": {
-				"title": "LakeChanges",
-				"grouped": false,
-				"sections": [{
-					"elements": [
-						{"key": "Lake","bind": "textValue:Lake","type": "QEntryElement","title": "Lake"},
-						{"type": "QRadioElement","key": "HydrologyChange","bind": "selectedItem:HydrologyChange","title": "Hydrology Change","items": ["0 = Lake is missing","1 = 1 lake actually now 2","2 = 2 lakes actually now 1"]},
-						{"type": "QRadioElement","key": "DrainageClass","bind": "selectedItem:DrainageClass","title": "Drainage Class","items": ["0 = No observed drainage","1 = 1-25% Drained","2 = 25-50% Drained","3 = 50-75% Drained","4 = >75% Drained","5 = 100% Drained"]},
-						{"key": "Monitor","bind": "boolValue:Monitor","type": "QBooleanElement","title": "Monitor?","boolValue": 0},
-						{"type": "QLabelElement","title": "Drainage attributes"},{"key": "DrainageType","bind": "selectedItem:DrainageType","type": "QSegmentedElement","items": ["","Emergent vegetation","Mud flat","Barren","Puddles"]},
-						{"type": "QLabelElement","title": "Lateral Outlet Type"},{"key": "LateralOutletType","bind": "selectedItem:LateralOutletType","type": "QSegmentedElement","items": ["","Talik","Lateral gully","Trickles","Other"]},
-						{"key": "RetrogressiveThaw","bind": "boolValue:RetrogressiveThaw","type": "QBooleanElement","title": "Retrogressive Thaw?","boolValue": 0},
-						{"key": "MurkyWater","bind": "boolValue:MurkyWater","type": "QBooleanElement","title": "Murky Water?","boolValue": 0},
-						{"key": "Slump","bind": "boolValue:Slump","type": "QBooleanElement","title": "Slump?","boolValue": 0},
-						{"key": "StreamFlow","bind": "boolValue:StreamFlow","type": "QBooleanElement","title": "Stream Flow?","boolValue": 0},
-						{"key": "LakeNotes","bind": "textValue:LakeNotes","type": "QEntryElement","title": "LakeNotes"}
-					]
-				}]
-			},
-			"symbology": {
-				"type": "simple",
-				"symbol": {
-					"type": "esriSMS",
-					"style": "esriSMSSquare",
-					"color": [51,153,255,255],
-					"size": 18,
-					"outline": {
-						"color": [0,0,0,255],
-						"width": 1
-					}
-				}
-			}
-		},
-		{
-			"name": "IncidentalObservations",
-			"allow_off_transect_observations":true,
-			"attributes": [{
-					"type": 700,
-					"name": "IncSpecies"
-				},
-				{
-					"name": "IncCount",
-					"type": 100
-				},
-				{
-					"name": "IncNotes",
-					"type": 700
-				}
-			],
-			"locations": [{
-					"type": "gps",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTarget",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "mapTouch",
-					"default": false,
-					"allow": true
-				},
-				{
-					"type": "angleDistance",
-					"default": true,
-					"allow": false,
-					"units": "meters",
-					"direction": "cw",
-					"deadAhead": 180
-				}
-			],
-			"dialog": {
-				"title": "IncidentalObservations",
-				"grouped": false,
-				"sections": [{
-					"elements": [{
-							"key": "IncSpecies",
-							"bind": "selectedItem:IncSpecies",
-							"type": "QRadioElement",
-							"title": "Species",
-							"items": [
-								"",
-								"RNGR",
-								"ARLO",
-								"ARTE",
-								"ALTE",
-								"COLO",
-								"PALO",
-								"RTLO",
-								"TERN",
-								"TUSW",
-								"UNLO",
-								"YBLO",
-								"Black bear",
-								"Brown bear",
-								"Caribou",
-								"Moose",
-								"Muskox",
-								"Wolf",
-								"Wolverine",
-								"Other-see notes"
-							]
-						},
-						{
-							"key": "IncCount",
-							"bind": "numberValue:IncCount",
-							"type": "QIntegerElement",
-							"title": "Count"
-						},
-						{
-							"key": "IncNotes",
-							"bind": "textValue:IncNotes",
-							"type": "QMultilineElement",
-							"title": "Notes"
-						}
-					]
-				}]
-			},
-			"symbology": {
-				"type": "simple",
-				"symbol": {
-					"type": "esriSMS",
-					"style": "esriSMSTriangle",
-          "color": [255,0,255,255],
-					"size": 18,
-					"outline": {
-            "color": [0,0,0,255],
-						"width": 1
-					}
-				}
-			}
-		}
-	],
-	"csv": {
-		"gps_points": {
-			"name": "GpsPoints",
-			"field_names": [
-				"Timestamp",
-				"Latitude",
-				"Longitude",
-				"Datum",
-				"Error_radius_m",
-				"Course",
-				"Speed_mps",
-				"Altitude_m",
-				"Vert_error_m"
-			],
-			"field_types": [
-				"TEXT",
-				"DOUBLE",
-				"DOUBLE",
-				"TEXT",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE"
-			],
-			"key_indexes": [
-				0,
-				2,
-				1
-			]
-		},
-		"track_logs": {
-			"name": "TrackLogs",
-			"field_names": [
-				"Observing",
-				"Start_UTC",
-				"Start_Local",
-				"Year",
-				"Day_of_Year",
-				"End_UTC",
-				"End_Local",
-				"Duration_sec",
-				"Start_Latitude",
-				"Start_Longitude",
-				"End_Latitude",
-				"End_Longitude",
-				"Datum",
-				"Length_m"
-			],
-			"field_types": [
-				"TEXT",
-				"TEXT",
-				"TEXT",
-				"SHORT",
-				"SHORT",
-				"TEXT",
-				"TEXT",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"TEXT",
-				"DOUBLE"
-			],
-			"start_key_indexes": [
-				1,
-				9,
-				8
-			],
-			"end_key_indexes": [
-				5,
-				11,
-				10
-			]
-		},
-		"features": {
-			"header": "Timestamp_UTC,Timestamp_Local,Year,Day_of_Year,Feature_Latitude,Feature_Longitude,Observer_Latitude,Observer_Longitude,Datum,Map_Name,Map_Author,Map_Date,Angle,Distance,Perp_Meters",
-			"feature_field_names": [
-				"Timestamp_UTC",
-				"Timestamp_Local",
-				"Year",
-				"Day_of_Year",
-				"Latitude",
-				"Longitude",
-				"Datum"
-			],
-			"feature_field_types": [
-				"DATE",
-				"DATE",
-				"SHORT",
-				"SHORT",
-				"DOUBLE",
-				"DOUBLE",
-				"TEXT"
-			],
-			"feature_field_map": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				8
-			],
-			"feature_key_indexes": [
-				0,
-				5,
-				4
-			],
-			"obs_name": "Observations",
-			"obs_field_names": [
-				"Timestamp_UTC",
-				"Timestamp_Local",
-				"Year",
-				"Day_of_Year",
-				"Map_Name",
-				"Map_Author",
-				"Map_Date",
-				"Angle",
-				"Distance",
-				"Perp_meters",
-				"Latitude",
-				"Longitude",
-				"Datum"
-			],
-			"obs_field_types": [
-				"TEXT",
-				"TEXT",
-				"SHORT",
-				"SHORT",
-				"TEXT",
-				"TEXT",
-				"TEXT",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"DOUBLE",
-				"TEXT"
-			],
-			"obs_field_map": [
-				0,
-				1,
-				2,
-				3,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				6,
-				7,
-				8
-			],
-			"obs_key_indexes": [
-				0,
-				11,
-				10
-			]
-		}
-	}
+  "meta-name": "NPS-Protocol-Specification",
+  "meta-version": 2,
+  "name": "Yblo test 1726",
+  "version": 4,
+  "date": "2022-02-07",
+  "description": "test 1726",
+  "mission": {
+    "attributes": [
+      {
+        "name": "Observer",
+        "type": 700
+      }
+    ],
+    "dialog": {
+      "sections": [
+        {
+          "elements": [
+            {
+              "type": "QEntryElement",
+              "title": "Observer",
+              "bind": "textValue:Observer",
+              "placeholder": "Initials",
+              "autocorrectionType": "No",
+              "autocapitalizationType": "AllCharacters"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "features": [
+    {
+      "name": "Loons",
+      "attributes": [
+        {
+          "name": "Lake",
+          "type": 700
+        },
+        {
+          "name": "SpeciesAcronym",
+          "type": 700
+        },
+        {
+          "name": "Count",
+          "type": 100
+        },
+        {
+          "name": "Pairs",
+          "type": 100
+        },
+        {
+          "name": "Nest",
+          "type": 800
+        },
+        {
+          "name": "Chicks",
+          "type": 100
+        },
+        {
+          "name": "Eggs",
+          "type": 100
+        },
+        {
+          "name": "Location",
+          "type": 700
+        },
+        {
+          "name": "Activity",
+          "type": 700
+        },
+        {
+          "name": "Waypoint",
+          "type": 700
+        },
+        {
+          "name": "ObservationNotes",
+          "type": 700
+        }
+      ],
+      "dialog": {
+        "sections": [
+          {
+            "elements": [
+              {
+                "key": "Lake",
+                "bind": "textValue:Lake",
+                "type": "QEntryElement",
+                "title": "Lake"
+              },
+              {
+                "key": "SpeciesAcronym",
+                "bind": "textValue:SpeciesAcronym",
+                "type": "QEntryElement",
+                "title": "SpeciesAcronym"
+              },
+              {
+                "key": "Count",
+                "bind": "numberValue:Count",
+                "type": "QIntegerElement",
+                "title": "Count"
+              },
+              {
+                "key": "Pairs",
+                "bind": "numberValue:Pairs",
+                "type": "QIntegerElement",
+                "title": "Pairs"
+              },
+              {
+                "key": "Nest",
+                "bind": "boolValue:Nest",
+                "type": "QBooleanElement",
+                "title": "Nest?",
+                "boolValue": 0
+              },
+              {
+                "key": "Chicks",
+                "bind": "numberValue:Chicks",
+                "type": "QIntegerElement",
+                "title": "Chicks"
+              },
+              {
+                "key": "Eggs",
+                "bind": "numberValue:Eggs",
+                "type": "QIntegerElement",
+                "title": "Eggs"
+              },
+              {
+                "key": "Location",
+                "bind": "textValue:Location",
+                "type": "QEntryElement",
+                "title": "Location"
+              },
+              {
+                "key": "Activity",
+                "bind": "textValue:Activity",
+                "type": "QEntryElement",
+                "title": "Activity"
+              },
+              {
+                "key": "Waypoint",
+                "bind": "textValue:Waypoint",
+                "type": "QEntryElement",
+                "title": "Waypoint"
+              },
+              {
+                "key": "ObservationNotes",
+                "bind": "textValue:ObservationNotes",
+                "type": "QEntryElement",
+                "title": "ObservationNotes"
+              }
+            ]
+          }
+        ]
+      },
+      "locations": [
+        {
+          "type": "gps"
+        },
+        {
+          "type": "mapTouch"
+        }
+      ],
+      "label": {
+        "definition": {
+          "labelExpression": "[Acronym]",
+          "symbol": {
+            "type": "esriTS",
+            "color": [ 255, 255, 0, 255 ],
+            "font": {
+              "size": 12
+            }
+          }
+        }
+      },
+      "symbology": {
+        "type": "uniqueValue",
+        "field1": "Acronym",
+        "defaultSymbol": {
+          "type": "esriSMS",
+          "style": "esriSMSSquare",
+          "color": [ 142, 68, 173, 255 ],
+          "size": 14,
+          "outline": {
+            "color": [ 74, 35, 90, 255 ],
+            "width": 2
+          }
+        },
+        "uniqueValueInfos": [
+          {
+            "value": true,
+            "symbol": {
+              "type": "esriSMS",
+              "style": "esriSMSDiamond",
+              "color": [ 215, 189, 226, 255 ],
+              "size": 18,
+              "outline": {
+                "color": [ 74, 35, 90, 255 ],
+                "width": 2
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "transects": "none"
 }
