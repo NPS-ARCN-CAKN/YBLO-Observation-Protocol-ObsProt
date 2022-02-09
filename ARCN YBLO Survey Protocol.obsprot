@@ -1,10 +1,10 @@
 {
   "meta-name": "NPS-Protocol-Specification",
   "meta-version": 2,
-  "name": "Yblo test 1726",
+  "name": "Loons 1310",
   "version": 4,
-  "date": "2022-02-07",
-  "description": "test 1726",
+  "date": "2022-02-09 1310",
+  "description": "Draft loons obsprot. Not ready for use.",
   "mission": {
     "attributes": [
       {
@@ -83,22 +83,22 @@
           {
             "elements": [
               {
-                "key": "Lake",
+                "type": "QEntryElement",
                 "bind": "textValue:Lake",
-                "type": "QEntryElement",
-                "title": "Lake"
+                "title": "Lake",
+                "key": "Lake"
               },
               {
-                "key": "SpeciesAcronym",
+                "type": "QEntryElement",
                 "bind": "textValue:SpeciesAcronym",
-                "type": "QEntryElement",
-                "title": "SpeciesAcronym"
+                "title": "SpeciesAcronym",
+                "key": "SpeciesAcronym"
               },
               {
-                "key": "Count",
-                "bind": "numberValue:Count",
                 "type": "QIntegerElement",
-                "title": "Count"
+                "bind": "numberValue:Count",
+                "title": "Count",
+                "key": "Count"
               },
               {
                 "key": "Pairs",
@@ -201,6 +201,302 @@
             }
           }
         ]
+      }
+    },
+    {
+      "name": "Lake",
+      "allow_off_transect_observations": true,
+      "attributes": [
+        {
+          "name": "Lake",
+          "type": 700
+        },
+        {
+          "name": "HydrologyChange",
+          "type": 700
+        },
+        {
+          "name": "DrainageClass",
+          "type": 700
+        },
+        {
+          "name": "Monitor",
+          "type": 800
+        },
+        {
+          "name": "DrainageType",
+          "type": 700
+        },
+        {
+          "name": "LateralOutletType",
+          "type": 700
+        },
+        {
+          "name": "RetrogressiveThaw",
+          "type": 800
+        },
+        {
+          "name": "MurkyWater",
+          "type": 800
+        },
+        {
+          "name": "Slump",
+          "type": 800
+        },
+        {
+          "name": "StreamFlow",
+          "type": 800
+        },
+        {
+          "name": "LakeNotes",
+          "type": 700
+        }
+      ],
+      "locations": [
+        {
+          "type": "gps",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTarget",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTouch",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "angleDistance",
+          "default": true,
+          "allow": false,
+          "units": "meters",
+          "direction": "cw",
+          "deadAhead": 180
+        }
+      ],
+      "dialog": {
+        "title": "LakeChanges",
+        "grouped": false,
+        "sections": [
+          {
+            "elements": [
+              {
+                "key": "Lake",
+                "bind": "textValue:Lake",
+                "type": "QEntryElement",
+                "title": "Lake"
+              },
+              {
+                "type": "QRadioElement",
+                "key": "HydrologyChange",
+                "bind": "selectedItem:HydrologyChange",
+                "title": "Hydrology Change",
+                "items": [
+                  "0 = Lake is missing",
+                  "1 = 1 lake actually now 2",
+                  "2 = 2 lakes actually now 1"
+                ]
+              },
+              {
+                "type": "QRadioElement",
+                "key": "DrainageClass",
+                "bind": "selectedItem:DrainageClass",
+                "title": "Drainage Class",
+                "items": [
+                  "0 = No observed drainage",
+                  "1 = 1-25% Drained",
+                  "2 = 25-50% Drained",
+                  "3 = 50-75% Drained",
+                  "4 = >75% Drained",
+                  "5 = 100% Drained"
+                ]
+              },
+              {
+                "key": "Monitor",
+                "bind": "boolValue:Monitor",
+                "type": "QBooleanElement",
+                "title": "Monitor?",
+                "boolValue": 0
+              },
+              {
+                "type": "QLabelElement",
+                "title": "Drainage attributes"
+              },
+              {
+                "key": "DrainageType",
+                "bind": "selectedItem:DrainageType",
+                "type": "QSegmentedElement",
+                "items": [ "", "Emergent vegetation", "Mud flat", "Barren", "Puddles" ]
+              },
+              {
+                "type": "QLabelElement",
+                "title": "Lateral Outlet Type"
+              },
+              {
+                "key": "LateralOutletType",
+                "bind": "selectedItem:LateralOutletType",
+                "type": "QSegmentedElement",
+                "items": [ "", "Talik", "Lateral gully", "Trickles", "Other" ]
+              },
+              {
+                "key": "RetrogressiveThaw",
+                "bind": "boolValue:RetrogressiveThaw",
+                "type": "QBooleanElement",
+                "title": "Retrogressive Thaw?",
+                "boolValue": 0
+              },
+              {
+                "key": "MurkyWater",
+                "bind": "boolValue:MurkyWater",
+                "type": "QBooleanElement",
+                "title": "Murky Water?",
+                "boolValue": 0
+              },
+              {
+                "key": "Slump",
+                "bind": "boolValue:Slump",
+                "type": "QBooleanElement",
+                "title": "Slump?",
+                "boolValue": 0
+              },
+              {
+                "key": "StreamFlow",
+                "bind": "boolValue:StreamFlow",
+                "type": "QBooleanElement",
+                "title": "Stream Flow?",
+                "boolValue": 0
+              },
+              {
+                "key": "LakeNotes",
+                "bind": "textValue:LakeNotes",
+                "type": "QEntryElement",
+                "title": "LakeNotes"
+              }
+            ]
+          }
+        ]
+      },
+      "symbology": {
+        "type": "simple",
+        "symbol": {
+          "type": "esriSMS",
+          "style": "esriSMSSquare",
+          "color": [ 51, 153, 255, 255 ],
+          "size": 18,
+          "outline": {
+            "color": [ 0, 0, 0, 255 ],
+            "width": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "IncidentalObservations",
+      "allow_off_transect_observations": true,
+      "attributes": [
+        {
+          "type": 700,
+          "name": "IncSpecies"
+        },
+        {
+          "name": "IncCount",
+          "type": 100
+        },
+        {
+          "name": "IncNotes",
+          "type": 700
+        }
+      ],
+      "locations": [
+        {
+          "type": "gps",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTarget",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "mapTouch",
+          "default": false,
+          "allow": true
+        },
+        {
+          "type": "angleDistance",
+          "default": true,
+          "allow": false,
+          "units": "meters",
+          "direction": "cw",
+          "deadAhead": 180
+        }
+      ],
+      "dialog": {
+        "title": "IncidentalObservations",
+        "grouped": false,
+        "sections": [
+          {
+            "elements": [
+              {
+                "key": "IncSpecies",
+                "bind": "selectedItem:IncSpecies",
+                "type": "QRadioElement",
+                "title": "Species",
+                "items": [
+                  "",
+                  "RNGR",
+                  "ARLO",
+                  "ARTE",
+                  "ALTE",
+                  "COLO",
+                  "PALO",
+                  "RTLO",
+                  "TERN",
+                  "TUSW",
+                  "UNLO",
+                  "YBLO",
+                  "Black bear",
+                  "Brown bear",
+                  "Caribou",
+                  "Moose",
+                  "Muskox",
+                  "Wolf",
+                  "Wolverine",
+                  "Other-see notes"
+                ]
+              },
+              {
+                "key": "IncCount",
+                "bind": "numberValue:IncCount",
+                "type": "QIntegerElement",
+                "title": "Count"
+              },
+              {
+                "key": "IncNotes",
+                "bind": "textValue:IncNotes",
+                "type": "QMultilineElement",
+                "title": "Notes"
+              }
+            ]
+          }
+        ]
+      },
+      "symbology": {
+        "type": "simple",
+        "symbol": {
+          "type": "esriSMS",
+          "style": "esriSMSTriangle",
+          "color": [ 255, 0, 255, 255 ],
+          "size": 18,
+          "outline": {
+            "color": [ 0, 0, 0, 255 ],
+            "width": 1
+          }
+        }
       }
     }
   ],
