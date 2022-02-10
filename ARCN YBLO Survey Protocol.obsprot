@@ -218,7 +218,12 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
-
+{
+								"type" : "QRadioElement",
+								"bind" : "selectedItem:SpeciesAcronym",
+								"title" : "Species",
+								"items" : [ "ARLO", "COLO"]
+							},
 							{
 								"key" : "Count",
 								"bind" : "numberValue:Count",
