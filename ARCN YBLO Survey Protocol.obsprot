@@ -21,7 +21,7 @@
 			},
 			{
 				"name": "WindSpeed",
-				"type": 100
+				"type": 700
 			},
 			{
 				"name": "Observer",
@@ -37,7 +37,7 @@
 			},
 			{
 				"name": "AirSpeed",
-				"type": 100
+				"type": 700
 			},
 			{
 				"name": "Temp",
@@ -61,27 +61,102 @@
 				{
 					"elements" : [
 						{
-							"type" : "QRadioElement",
-							"bind" : "selectedItem:Plot",
-							"title" : "Plot",
-							"items" : [ "1", "2", "3", "4" ]
-						},
-						{
-							"type" : "QEntryElement",
-							"bind" : "textValue:Pilot",
-							"title" : "Pilot",
-							"placeholder" : "Initials",
-							"autocorrectionType" : "No",
-							"autocapitalizationType" : "AllCharacters"
-						},
-						{
-							"type" : "QEntryElement",
-							"bind" : "textValue:Observer",
-							"title" : "Observer",
-							"placeholder" : "Initials",
-							"autocorrectionType" : "No",
-							"autocapitalizationType" : "AllCharacters"
-						}
+						"type": "QEntryElement",
+						"title": "Plot",
+						"key": "Plot",
+						"bind": "textValue:Plot",
+						"placeholder": "Plot",
+						"autocorrectionType": "No",
+						"autocapitalizationType": "AllCharacters"
+					},
+					{
+						"type": "QEntryElement",
+						"title": "Tail #",
+						"key": "TailNo",
+						"bind": "textValue:TailNo",
+						"placeholder": "Tail #",
+						"autocorrectionType": "No",
+						"autocapitalizationType": "AllCharacters"
+					},
+					{
+						"type": "QEntryElement",
+						"key": "Observer",
+						"bind": "textValue:Observer",
+						"title": "Observer initials",
+						"placeholder": "Observer initials",
+						"autocorrectionType": "No",
+						"autocapitalizationType": "AllCharacters"
+					},
+					{
+						"type": "QEntryElement",
+						"key": "Pilot",
+						"bind": "textValue:Pilot",
+						"title": "Pilot initials",
+						"placeholder": "Pilot initials",
+						"autocorrectionType": "No",
+						"autocapitalizationType": "AllCharacters"
+					},
+					{
+						"type": "QRadioElement",
+						"key": "SkyConditions",
+						"bind": "selectedItem:SkyConditions",
+						"title": "Sky conditions",
+						"items": [
+							"1|Clear to <10% cloud cover",
+							"2|Partly cloudy; 10|50% cloud cover",
+							"3|Cloudy;  51-90% cloud cover",
+							"4|Overcast; >90% cloud cover",
+							"5|Fog or smoke",
+							"6|Drizzle",
+							"7|Showers",
+							"8|Rain",
+							"9|Sleet",
+							"10|Light snow"
+						]
+					},
+					{
+						"type": "QRadioElement",
+						"key": "WindSpeed",
+						"bind": "selectedItem:WindSpeed",
+						"title": "Wind Speed",
+						"items": ["<5 knots","9-5 knots","10-14 knots",">15 knots"]
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Waves",
+						"bind": "boolValue:Waves",
+						"title": "Waves?",
+						"boolValue": 0
+					},
+					{
+						"type": "QBooleanElement",
+						"key": "Whitecaps",
+						"bind": "boolValue:Whitecaps",
+						"title": "Whitecaps?",
+						"boolValue": 0
+					},					
+					{
+						"type": "QEntryElement",
+						"key": "Aircraft",
+						"bind": "textValue:Aircraft",
+						"title": "Aircraft",
+						"placeholder": "Aircraft",
+						"autocorrectionType": "No"
+					},
+					{
+						"type": "QEntryElement",
+						"title": "Air speed",
+						"key": "AirSpeed",
+						"bind": "textValue:AirSpeed",
+						"placeholder": "AirSpeed",
+						"autocorrectionType": "No"
+					},
+					{
+						"type": "QMultilineElement",
+						"key": "PlotNotes",
+						"bind": "textValue:PlotNotes",
+						"title": "Comments"
+					}
 					]
 				}
 			]
