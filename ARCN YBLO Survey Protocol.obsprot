@@ -8,16 +8,52 @@
 	"mission" : {
 		"attributes" : [
 			{
-				"name" : "Plot",
-				"type" : 700
+				"name": "Plot",
+				"type": 700
 			},
 			{
-				"name" : "Pilot",
-				"type" : 700
+				"name": "TailNo",
+				"type": 700
 			},
 			{
-				"name" : "Observer",
-				"type" : 700
+				"name": "SkyConditions",
+				"type": 700
+			},
+			{
+				"name": "WindSpeed",
+				"type": 100
+			},
+			{
+				"name": "Observer",
+				"type": 700
+			},
+			{
+				"name": "Pilot",
+				"type": 700
+			},
+			{
+				"name": "Aircraft",
+				"type": 700
+			},
+			{
+				"name": "AirSpeed",
+				"type": 100
+			},
+			{
+				"name": "Temp",
+				"type": 100
+			},
+			{
+				"name": "PlotNotes",
+				"type": 700
+			},
+			{
+				"name": "Waves",
+				"type": 800
+			},
+			{
+				"name": "Whitecaps",
+				"type": 800
 			}
 		],
 		"dialog" : {
