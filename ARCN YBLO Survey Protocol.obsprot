@@ -112,7 +112,11 @@
 							]
 						},
 						{
-							"type" : "QRadioElement",
+							"type" : "QLabelElement",
+							"title" : "Wind speed"
+						},
+						{
+							"type" : "QSegmentedElement",
 							"key" : "WindSpeed",
 							"bind" : "selectedItem:WindSpeed",
 							"title" : "Wind Speed",
