@@ -1,9 +1,9 @@
 {
 	"meta-name" : "NPS-Protocol-Specification",
 	"meta-version" : 2,
-	"name" : "Loons 1310",
+	"name" : "Loons",
 	"version" : 4,
-	"date" : "2022-02-09 1310",
+	"date" : "2022-02-10 1057",
 	"description" : "Draft loons obsprot. Not ready for use.",
 	"mission" : {
 		"attributes" : [
@@ -68,21 +68,21 @@
 						},
 						{
 							"type" : "QEntryElement",
-							"title" : "Tail #",
-							"key" : "TailNo",
 							"bind" : "textValue:TailNo",
+							"title" : "Tail #",
 							"placeholder" : "Tail #",
 							"autocorrectionType" : "No",
-							"autocapitalizationType" : "AllCharacters"
+							"autocapitalizationType" : "AllCharacters",
+							"key" : "TailNo"
 						},
 						{
 							"type" : "QEntryElement",
-							"key" : "Observer",
 							"bind" : "textValue:Observer",
 							"title" : "Observer initials",
 							"placeholder" : "Observer initials",
 							"autocorrectionType" : "No",
-							"autocapitalizationType" : "AllCharacters"
+							"autocapitalizationType" : "AllCharacters",
+							"key" : "Observer"
 						},
 						{
 							"type" : "QEntryElement",
@@ -218,11 +218,11 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
-{
+							{
 								"type" : "QRadioElement",
 								"bind" : "selectedItem:SpeciesAcronym",
 								"title" : "Species",
-								"items" : [ "ARLO", "COLO"]
+								"items" : [ "ARLO", "COLO" ]
 							},
 							{
 								"key" : "Count",
@@ -256,10 +256,14 @@
 								"title" : "Eggs"
 							},
 							{
-								"type" : "QEntryElement",
-								"title" : "Location",
+								"type" : "QLabelElement",
+								"title" : "Location of nest"
+							},
+							{
+								"type" : "QSegmentedElement",
 								"key" : "Location",
-								"bind" : "textValue:Location"
+								"bind" : "selectedItem:Location",
+								"items" : [ "", "Peninsula", "Shoreline", "Island" ]
 							},
 							{
 								"key" : "Activity",
