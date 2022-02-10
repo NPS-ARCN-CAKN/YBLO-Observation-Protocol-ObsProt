@@ -266,22 +266,26 @@
 								"items" : [ "", "Peninsula", "Shoreline", "Island" ]
 							},
 							{
-								"key" : "Activity",
-								"bind" : "textValue:Activity",
-								"type" : "QEntryElement",
+								"type" : "QLabelElement",
 								"title" : "Activity"
+							},
+							{
+								"type" : "QSegmentedElement",
+								"key" : "Activity",
+								"bind" : "selectedItem:Activity",
+								"items" : [ "", "On nest", "Flushed", "By nest" ]
+							},
+							{
+								"type" : "QMultilineElement",
+								"key" : "ObservationNotes",
+								"bind" : "textValue:ObservationNotes",
+								"title" : "Notes"
 							},
 							{
 								"type" : "QEntryElement",
 								"title" : "Waypoint",
 								"key" : "Waypoint",
 								"bind" : "textValue:Waypoint"
-							},
-							{
-								"key" : "ObservationNotes",
-								"bind" : "textValue:ObservationNotes",
-								"type" : "QEntryElement",
-								"title" : "ObservationNotes"
 							}
 						]
 					}
