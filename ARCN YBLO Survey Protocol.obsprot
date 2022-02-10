@@ -218,12 +218,7 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
-							{
-								"type" : "QEntryElement",
-								"bind" : "textValue:SpeciesAcronym",
-								"key" : "SpeciesAcronym",
-								"title" : "SpeciesAcronym"
-							},
+
 							{
 								"key" : "Count",
 								"bind" : "numberValue:Count",
