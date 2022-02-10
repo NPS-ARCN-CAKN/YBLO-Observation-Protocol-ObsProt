@@ -222,11 +222,15 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
+{
+								"type" : "QLabelElement",
+								"title" : "Species"
+							},
 							{
-								"type" : "QRadioElement",
+								"type" : "QSegmentedElement",
 								"bind" : "selectedItem:SpeciesAcronym",
 								"title" : "Species",
-								"items" : [ "ARLO", "COLO" ]
+								"items" : [ "ARLO", "COLO", "PALO", "RTLO", "YBLO", "UNLO" ]
 							},
 							{
 								"key" : "Count",
