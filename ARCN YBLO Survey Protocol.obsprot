@@ -8,6 +8,14 @@
 	"mission" : {
 		"attributes" : [
 			{
+				"name" : "Plot",
+				"type" : 700
+			},
+			{
+				"name" : "Pilot",
+				"type" : 700
+			},
+			{
 				"name" : "Observer",
 				"type" : 700
 			}
@@ -16,6 +24,20 @@
 			"sections" : [
 				{
 					"elements" : [
+						{
+							"type" : "QRadioElement",
+							"bind" : "selectedItem:Plot",
+							"title" : "Plot",
+							"items" : [ "1", "2", "3", "4" ]
+						},
+						{
+							"type" : "QEntryElement",
+							"bind" : "textValue:Pilot",
+							"title" : "Pilot",
+							"placeholder" : "Initials",
+							"autocorrectionType" : "No",
+							"autocapitalizationType" : "AllCharacters"
+						},
 						{
 							"type" : "QEntryElement",
 							"bind" : "textValue:Observer",
