@@ -436,15 +436,11 @@
 								"title" : "Lake"
 							},
 							{
-								"type" : "QRadioElement",
+								"type" : "QSegmentedElement",
 								"key" : "HydrologyChange",
 								"bind" : "selectedItem:HydrologyChange",
-								"title" : "Hydrology Change",
-								"items" : [
-									"0 = Lake is missing",
-									"1 = 1 lake actually now 2",
-									"2 = 2 lakes actually now 1"
-								]
+								"title" : "Hydrology Change-describe in notes",
+								"items" : [ "Lake is missing", "Lake divided", "Lakes merged" ]
 							},
 							{
 								"type" : "QRadioElement",
@@ -519,7 +515,7 @@
 								"key" : "LakeNotes",
 								"bind" : "textValue:LakeNotes",
 								"type" : "QEntryElement",
-								"title" : "LakeNotes"
+								"title" : "Lake change notes"
 							}
 						]
 					}
@@ -540,7 +536,7 @@
 			},
 			"label" : {
 				"definition" : {
-					"labelExpression" : "[HydrologyChange]",
+					"labelExpression" : "[Lake][HydrologyChange]",
 					"symbol" : {
 						"type" : "esriTS",
 						"color" : [ 255, 255, 0, 255 ],
