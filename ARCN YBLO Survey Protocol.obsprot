@@ -5,10 +5,6 @@
 	"version" : 4,
 	"date" : "2022-02-11 0936",
 	"description" : "Draft loons obsprot. ",
-	"observing" : "Observing",
-	"notobserving" : "Recording NOT observing",
-	"cancel_on_top" : true,
-	"gps_interval" : 2,
 	"mission" : {
 		"attributes" : [
 			{
@@ -533,12 +529,24 @@
 				"type" : "simple",
 				"symbol" : {
 					"type" : "esriSMS",
-					"style" : "esriSMSSquare",
-					"color" : [ 51, 153, 255, 255 ],
+					"style" : "esriSMSCircle",
+					"color" : [ 90, 151, 206, 255 ],
 					"size" : 18,
 					"outline" : {
 						"color" : [ 0, 0, 0, 255 ],
 						"width" : 1
+					}
+				}
+			},
+			"label" : {
+				"definition" : {
+					"labelExpression" : "[HydrologyChange]",
+					"symbol" : {
+						"type" : "esriTS",
+						"color" : [ 255, 255, 0, 255 ],
+						"font" : {
+							"size" : 10
+						}
 					}
 				}
 			}
@@ -647,8 +655,24 @@
 						"width" : 1
 					}
 				}
+			},
+			"label" : {
+				"definition" : {
+					"labelExpression" : "[IncSpecies]",
+					"symbol" : {
+						"type" : "esriTS",
+						"color" : [ 255, 255, 0, 255 ],
+						"font" : {
+							"size" : 10
+						}
+					}
+				}
 			}
 		}
 	],
-	"transects" : "none"
+	"transects" : "none",
+	"observing" : "Observing",
+	"notobserving" : "Recording NOT observing",
+	"cancel_on_top" : true,
+	"gps_interval" : 2
 }
