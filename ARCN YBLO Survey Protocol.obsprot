@@ -3,8 +3,12 @@
 	"meta-version" : 2,
 	"name" : "Loons",
 	"version" : 4,
-	"date" : "2022-02-10 1057",
-	"description" : "Draft loons obsprot. Not ready for use.",
+	"date" : "2022-02-11 0936",
+	"description" : "Draft loons obsprot. ",
+	"observing" : "Observing",
+	"notobserving" : "Recording NOT observing",
+	"cancel_on_top" : true,
+	"gps_interval" : 2,
 	"mission" : {
 		"attributes" : [
 			{
@@ -68,21 +72,21 @@
 						},
 						{
 							"type" : "QEntryElement",
-							"bind" : "textValue:TailNo",
-							"title" : "Tail #",
-							"placeholder" : "Tail #",
-							"autocorrectionType" : "No",
-							"autocapitalizationType" : "AllCharacters",
-							"key" : "TailNo"
-						},
-						{
-							"type" : "QEntryElement",
 							"bind" : "textValue:Observer",
 							"title" : "Observer initials",
 							"placeholder" : "Observer initials",
 							"autocorrectionType" : "No",
 							"autocapitalizationType" : "AllCharacters",
 							"key" : "Observer"
+						},
+						{
+							"type" : "QEntryElement",
+							"bind" : "textValue:TailNo",
+							"title" : "Tail #",
+							"placeholder" : "Tail #",
+							"autocorrectionType" : "No",
+							"autocapitalizationType" : "AllCharacters",
+							"key" : "TailNo"
 						},
 						{
 							"type" : "QEntryElement",
@@ -138,18 +142,18 @@
 						},
 						{
 							"type" : "QEntryElement",
-							"key" : "Aircraft",
-							"bind" : "textValue:Aircraft",
-							"title" : "Aircraft",
-							"placeholder" : "Aircraft",
+							"key" : "AirSpeed",
+							"bind" : "textValue:AirSpeed",
+							"title" : "Air speed",
+							"placeholder" : "AirSpeed",
 							"autocorrectionType" : "No"
 						},
 						{
 							"type" : "QEntryElement",
-							"title" : "Air speed",
-							"key" : "AirSpeed",
-							"bind" : "textValue:AirSpeed",
-							"placeholder" : "AirSpeed",
+							"title" : "Aircraft",
+							"key" : "Aircraft",
+							"bind" : "textValue:Aircraft",
+							"placeholder" : "Aircraft",
 							"autocorrectionType" : "No"
 						},
 						{
@@ -222,13 +226,13 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
-{
+							{
 								"type" : "QLabelElement",
 								"title" : "Species"
 							},
 							{
-								"type" : "QSegmentedElement",
 								"bind" : "selectedItem:SpeciesAcronym",
+								"type" : "QSegmentedElement",
 								"title" : "Species",
 								"items" : [ "ARLO", "COLO", "PALO", "RTLO", "YBLO", "UNLO" ]
 							},
@@ -258,9 +262,9 @@
 								"title" : "Chicks"
 							},
 							{
+								"type" : "QIntegerElement",
 								"key" : "Eggs",
 								"bind" : "numberValue:Eggs",
-								"type" : "QIntegerElement",
 								"title" : "Eggs"
 							},
 							{
@@ -309,7 +313,7 @@
 			],
 			"symbology" : {
 				"type" : "uniqueValue",
-				"field1" : "Acronym",
+				"field1" : "SpeciesAcronym",
 				"defaultSymbol" : {
 					"type" : "esriSMS",
 					"style" : "esriSMSSquare",
@@ -338,12 +342,12 @@
 			},
 			"label" : {
 				"definition" : {
-					"labelExpression" : "[Acronym]",
+					"labelExpression" : "[SpeciesAcronym]",
 					"symbol" : {
 						"type" : "esriTS",
 						"color" : [ 255, 255, 0, 255 ],
 						"font" : {
-							"size" : 12
+							"size" : 10
 						}
 					}
 				}
