@@ -264,23 +264,17 @@
 								"title" : "Eggs"
 							},
 							{
-								"type" : "QLabelElement",
-								"title" : "Location of nest"
-							},
-							{
 								"type" : "QSegmentedElement",
 								"key" : "Location",
 								"bind" : "selectedItem:Location",
+								"title" : "Location of nest",
 								"items" : [ "", "Peninsula", "Shoreline", "Island" ]
-							},
-							{
-								"type" : "QLabelElement",
-								"title" : "Activity"
 							},
 							{
 								"type" : "QSegmentedElement",
 								"key" : "Activity",
 								"bind" : "selectedItem:Activity",
+								"title" : "Activity",
 								"items" : [ "", "On nest", "Flushed", "By nest" ]
 							},
 							{
@@ -313,7 +307,7 @@
 				"defaultSymbol" : {
 					"type" : "esriSMS",
 					"style" : "esriSMSSquare",
-					"color" : [ 142, 68, 173, 255 ],
+					"color" : [ 245, 223, 113, 255 ],
 					"size" : 14,
 					"outline" : {
 						"color" : [ 74, 35, 90, 255 ],
@@ -464,23 +458,17 @@
 								"boolValue" : 0
 							},
 							{
-								"type" : "QLabelElement",
-								"title" : "Drainage attributes"
-							},
-							{
 								"key" : "DrainageType",
 								"bind" : "selectedItem:DrainageType",
 								"type" : "QSegmentedElement",
+								"title" : "Drainage attributes",
 								"items" : [ "", "Emergent vegetation", "Mud flat", "Barren", "Puddles" ]
-							},
-							{
-								"type" : "QLabelElement",
-								"title" : "Lateral Outlet Type"
 							},
 							{
 								"key" : "LateralOutletType",
 								"bind" : "selectedItem:LateralOutletType",
 								"type" : "QSegmentedElement",
+								"title" : "Lateral Outlet Type",
 								"items" : [ "", "Talik", "Lateral gully", "Trickles", "Other" ]
 							},
 							{
@@ -536,7 +524,7 @@
 			},
 			"label" : {
 				"definition" : {
-					"labelExpression" : "[Lake][HydrologyChange]",
+					"labelExpression" : "[HydrologyChange]",
 					"symbol" : {
 						"type" : "esriTS",
 						"color" : [ 255, 255, 0, 255 ],
