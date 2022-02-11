@@ -112,10 +112,6 @@
 							]
 						},
 						{
-							"type" : "QLabelElement",
-							"title" : "Wind speed"
-						},
-						{
 							"type" : "QSegmentedElement",
 							"key" : "WindSpeed",
 							"bind" : "selectedItem:WindSpeed",
@@ -222,10 +218,7 @@
 								"title" : "Lake",
 								"key" : "Lake"
 							},
-							{
-								"type" : "QLabelElement",
-								"title" : "Species"
-							},
+
 							{
 								"bind" : "selectedItem:SpeciesAcronym",
 								"type" : "QSegmentedElement",
