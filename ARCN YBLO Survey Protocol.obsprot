@@ -125,6 +125,7 @@
 							"bind" : "selectedItem:SkyConditions",
 							"title" : "Sky conditions",
 							"items" : [
+								""
 								"1|Clear to <10% cloud cover",
 								"2|Partly cloudy; 10|50% cloud cover",
 								"3|Cloudy;  51-90% cloud cover",
