@@ -172,7 +172,7 @@
 				},
 				{
 					"name" : "Pairs",
-					"type" : 100
+					"type" : 800
 				},
 				{
 					"name" : "Nest",
@@ -258,10 +258,11 @@
 								"title" : "Count"
 							},
 							{
+								"type" : "QBooleanElement",
 								"key" : "Pairs",
-								"bind" : "numberValue:Pairs",
-								"type" : "QIntegerElement",
-								"title" : "Pairs"
+								"bind" : "boolValue:Pairs",
+								"title" : "Pair?",
+								"boolValue" : 0
 							},
 							{
 								"key" : "Nest",
