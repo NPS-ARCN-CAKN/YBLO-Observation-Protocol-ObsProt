@@ -2,8 +2,8 @@
 	"meta-name" : "NPS-Protocol-Specification",
 	"meta-version" : 2,
 	"name" : "Loons",
-	"version" : 4.1,
-	"date" : "2023-05-04 1549",
+	"version" : 4.02,
+	"date" : "2023-05-09 1629",
 	"description" : "Loons obsprot. ",
 	"mission" : {
 		"attributes" : [
