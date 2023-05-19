@@ -458,7 +458,7 @@
 								"key" : "HydrologyChange",
 								"bind" : "selectedItem:HydrologyChange",
 								"title" : "Hydrology Change-describe in notes",
-								"items" : [ "Lake is missing", "Lake divided", "Lakes merged" ]
+								"items" : [ "Lake is drained", "Lake divided", "Lakes merged" ]
 							},
 							{
 								"type" : "QRadioElement",
