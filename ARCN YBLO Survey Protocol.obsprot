@@ -2,8 +2,9 @@
 	"meta-name" : "NPS-Protocol-Specification",
 	"meta-version" : 2,
 	"name" : "Loons",
-	"version" : 4.03,
-	"date" : "2023-05-09 1634",
+	"version" : 4.04,
+	"date" : "2023-05-19 1542",
+	"author" : "SDMiller",
 	"description" : "Loons obsprot. ",
 	"mission" : {
 		"attributes" : [
@@ -205,11 +206,11 @@
 					"type" : 100
 				},
 				{
-					"name" : "Pairs",
+					"name" : "IsPair",
 					"type" : 800
 				},
 				{
-					"name" : "Nest",
+					"name" : "IsNest",
 					"type" : 800
 				},
 				{
@@ -229,8 +230,8 @@
 					"type" : 700
 				},
 				{
-					"name" : "Waypoint",
-					"type" : 700
+					"name" : "IsIncidental",
+					"type" : 800
 				},
 				{
 					"name" : "ObservationNotes",
@@ -261,14 +262,14 @@
 							},
 							{
 								"type" : "QBooleanElement",
-								"key" : "Pairs",
-								"bind" : "boolValue:Pairs",
+								"key" : "IsPair",
+								"bind" : "boolValue:IsPair",
 								"title" : "Pair?",
 								"boolValue" : 0
 							},
 							{
-								"key" : "Nest",
-								"bind" : "boolValue:Nest",
+								"key" : "IsNest",
+								"bind" : "boolValue:IsNest",
 								"type" : "QBooleanElement",
 								"title" : "Nest?",
 								"boolValue" : 0
@@ -306,10 +307,11 @@
 								"title" : "Notes"
 							},
 							{
-								"type" : "QEntryElement",
-								"title" : "Waypoint",
-								"key" : "Waypoint",
-								"bind" : "textValue:Waypoint"
+								"key" : "IsIncidental",
+								"bind" : "boolValue:IsIncidental",
+								"type" : "QBooleanElement",
+								"title" : "Incidental?",
+								"boolValue" : 0
 							}
 						]
 					}
