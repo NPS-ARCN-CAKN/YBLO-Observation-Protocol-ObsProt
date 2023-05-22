@@ -11,3 +11,8 @@ Information on .obsprot files and their specifications can be found on the Alask
 U.S. Government Works
 Data and content created by government employees within the scope of their employment are not subject to domestic copyright protection under 17 U.S.C. § 105. Government works are by default in the U.S. Public Domain. 
 
+# Recent changes
+## Version 5, 2023-05-22 SDMiller
+- Changed Lake to an integer in both the Loons dialog and the HydrologyChange dialog
+- Changed Pond dialog title to HydrologyChange, which was more descriptive.
+
