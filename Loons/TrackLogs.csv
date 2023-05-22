@@ -1,0 +1,2 @@
+Plot,TailNo,SkyConditions,WindSpeed,Observer,Pilot,Aircraft,AirSpeed,Temp,PlotNotes,Waves,Whitecaps,Observing,Start_UTC,Start_Local,Year,Day_of_Year,End_UTC,End_Local,Duration_sec,Start_Latitude,Start_Longitude,End_Latitude,End_Longitude,Datum,Length_m
+"4",,,,,,,,,,0,0,No,2023-05-20T00:08:46.994Z,2023-05-19T16:08:46.994 AKDT,2023,139,2023-05-20T00:11:18.999Z,2023-05-19T16:11:18.999 AKDT,152.00,61.217152,-149.885783,61.217152,-149.885783,WGS84,0.0

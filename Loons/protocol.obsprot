@@ -2,8 +2,8 @@
 	"meta-name" : "NPS-Protocol-Specification",
 	"meta-version" : 2,
 	"name" : "Loons",
-	"version" : 5,
-	"date" : "2023-05-22 1151",
+	"version" : 4.04,
+	"date" : "2023-05-19 1542",
 	"author" : "SDMiller",
 	"description" : "Loons obsprot. ",
 	"mission" : {
@@ -195,7 +195,7 @@
 			"attributes" : [
 				{
 					"name" : "Lake",
-					"type" : 100
+					"type" : 700
 				},
 				{
 					"name" : "SpeciesAcronym",
@@ -243,10 +243,10 @@
 					{
 						"elements" : [							
 							{
-								"key" : "Lake",
-								"bind" : "numberValue:Lake",
-								"type" : "QIntegerElement",
-								"title" : "Lake"
+								"type" : "QEntryElement",
+								"bind" : "textValue:Lake",
+								"title" : "Lake",
+								"key" : "Lake"
 							},
 							{
 								"bind" : "selectedItem:SpeciesAcronym",
@@ -368,12 +368,12 @@
 			}
 		},
 		{
-			"name" : "LakeChange",
+			"name" : "Pond",
 			"allow_off_transect_observations" : true,
 			"attributes" : [
 				{
 					"name" : "Lake",
-					"type" : 100
+					"type" : 700
 				},
 				{
 					"name" : "HydrologyChange",
@@ -449,8 +449,8 @@
 						"elements" : [
 							{
 								"key" : "Lake",
-								"bind" : "numberValue:Lake",
-								"type" : "QIntegerElement",
+								"bind" : "textValue:Lake",
+								"type" : "QEntryElement",
 								"title" : "Lake"
 							},
 							{

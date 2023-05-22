@@ -1,0 +1,2 @@
+Lake,SpeciesAcronym,Count,IsPair,IsNest,Chicks,Eggs,Location,Activity,IsIncidental,ObservationNotes,Timestamp_UTC,Timestamp_Local,Year,Day_of_Year,Feature_Latitude,Feature_Longitude,Observer_Latitude,Observer_Longitude,Datum,Map_Name,Map_Author,Map_Date,Angle,Distance,Perp_Meters
+"23","YBLO",2,1,1,,1,"Peninsula","On nest",0,"test",2023-05-20T00:08:55.994Z,2023-05-19T16:08:55.994 AKDT,2023,139,61.218545,-149.893378,61.217152,-149.885783,WGS84,Anchorage,Unknown,2022-02-07 21:19:29 +0000,,,
