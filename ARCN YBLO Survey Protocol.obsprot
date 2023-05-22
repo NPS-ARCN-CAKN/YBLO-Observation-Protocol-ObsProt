@@ -368,7 +368,7 @@
 			}
 		},
 		{
-			"name" : "LakeChange",
+			"name" : "HydrologyChange",
 			"allow_off_transect_observations" : true,
 			"attributes" : [
 				{
@@ -442,7 +442,7 @@
 				}
 			],
 			"dialog" : {
-				"title" : "LakeChanges",
+				"title" : "HydrologyChange",
 				"grouped" : false,
 				"sections" : [
 					{
